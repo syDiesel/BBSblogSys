@@ -1,0 +1,100 @@
+.login-part {
+background: #fefefe;
+border: 1px solid #eaeaea;
+border-bottom: 1px solid #cbcbcb;
+box-shazdow: 1px 1px 1px #eaeaea;
+width:450px;
+height:380px;
+margin:50px auto;
+}
+
+#prompt{
+	float:left;
+}
+.main .login-part h3 {
+margin: 0;
+margin-bottom: 23px;
+font-size:15px;
+color: #747474;
+padding: 32px 30px 0 30px;
+}
+
+
+.user-info {
+padding: 0 30px;
+width:410px;
+margin:10px auto;
+}
+
+.user-pass form {
+margin: 0;
+padding: 0;
+padding-right: 8px;
+}
+
+
+.extends-input, .user-name, .pass-word ,#mycode{
+background: #fff;
+display: block;
+width: 300px;
+height:40px;
+height:20px\9;
+padding: 8px 0;
+border: 2px solid #e1e1e1;
+margin-bottom: 20px;
+font-weight: thin;
+text-indent: 43px;
+outline: 0;
+font-size: 1.25em;
+margin-top:20px;
+margin-left:10px;
+float:left;
+}
+
+#code{
+float:left;
+margin:20px 5px;
+}
+
+.username_info1,.password_info1,.code_info1{
+float:left;
+margin:28px 0px;
+}
+
+#mycode{
+	width:42%;
+	float:left;
+}
+
+
+.logging {
+    background: none repeat scroll 0% 0% #43B0F7;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    clear: both;
+    width: 300px;
+    border: medium none;
+    margin:20px auto;
+}
+
+#loginForm .td1{
+	width:70px;
+	
+	font-size:18px\9;
+}
+
+#loginForm .td2{
+	width:300px;
+	line-height:15px\9;
+}
+
+#loginForm .td3{
+	margin-left:5px;
+	width:30px;
+}

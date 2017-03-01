@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+
+.right_listForum{
+	width:800px;
+	margin-left:20px;
+	float:left;
+	min-height:900px;
+	background:#fff;
+	border-top:#087ec4  3px solid;
+}
+
+.listForum_title{
+	height:40px;
+	border-bottom:1px solid #e1e1e1;
+	width:100%;
+}
+
+#listForum_well,#listForum_hot,#listForum_discuss,#listForum_origin{
+	width:15%;
+	border-right:1px solid #e1e1e1;
+	line-height:40px;
+	float:left;
+	text-align:center;
+	font-size:16px;
+	color:#333;
+}
+#listForum_well a{
+	color:#333;
+}
+#listForum_hot a{
+	color:#333;
+}
+#listForum_discuss a{
+	color:#333;
+}
+
+
+#listForum_origin a{
+	color:#333;
+}
+.right_mainBox{
+	min-height:700px;
+	width:100%;
+}
+
+.forum_list{
+	width:90%;
+	margin:40px auto;
+	table-layout:fixed
+}
+.forum_list td{
+	line-height:50px;
+}
+.forum_list td{
+	border-bottom:1px #999 dashed;
+}
+
+.forum_list .forum_detail{
+	color:#999;
+	font-size:12px;
+}
+
+.forum_list .forum_detail .forum_subject{
+	width:300px;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden; 
+}
+
+.forum_list .forum_detail .forum_subject a{
+	color:#333;
+	font-size:14px;
+}
+
+.forum_list .forum_detail .forum_poster{
+	width:80px;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden; 
+}
+
+.forum_list .forum_detail .forum_poster a{
+	color:#0d88d2;
+	font-size:12px;
+}
+
+.forum_list .forum_detail .forum_read_reply{
+	width:100px;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden; 
+}
+
+.forum_list .forum_detail .forum_time{
+	width:120px;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden; 
+}
+
+.forum_list .forum_detail .forum_label{
+	width:80px;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+	text-align:right;
+}
+
+.forum_list .forum_detail .forum_label a{
+	border:#999 1px solid;
+	padding:3px 3px 3px 3px;
+	color:#0d88d2;
+	font-size:10px;
+	width:30px;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+}
+
+.forum_manage{
+	width:70px;
+	text-align:right;
+	font-size:10px;
+}
+
+.manage_select{
+	border-radius:5px;
+	width:70px;
+}
+
+
+.fenYe{
+	width:100%;
+	text-align:center;
+	height:50px;
+}
+
+.fenYe a{
+	border:#999 1px solid;
+	color:#0d88d2;
+	padding:3px 10px 3px 10px;
+	margin-left:5px;
+}
+
+
+

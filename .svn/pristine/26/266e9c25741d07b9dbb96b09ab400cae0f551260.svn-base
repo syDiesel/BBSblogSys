@@ -1,0 +1,318 @@
+@CHARSET "UTF-8";
+
+
+.board{
+	background:#FFF;
+	width:900px;
+	/* height:330px; */
+	height:auto;
+	overflow:hidden;
+	float:left;
+	/* margin-top:20px; */
+	border-bottom:solid 1px #999;
+}
+.board_head {
+	/* border-bottom:solid 1px #999; */
+	/* overflow:hidden; */
+	height:30 px;
+}
+.board_head h3{
+	float:left;
+	font-size:16px;
+	padding:11px 8px;
+}
+.board_content{
+	height:auto;
+}
+.ForumButton{
+	
+	width:90px;
+	height:30px;
+	float:right;
+	margin:5px 5px;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+}
+
+.headerNext{
+	width:900px;
+	height:40px;
+	margin:0px auto;
+	background:#fff;
+	border:#3399CC solid 3px;
+	color:#3399CC;
+	font-size:18px;
+}
+.master{	
+	margin:5px 15px;
+}
+
+.table_text{
+	text_align:left;
+	line-height: 20px;
+}
+.table_title{
+	text_align:left;
+	line-height: 20px;
+}
+
+.board_content a{
+	color:#00F;
+}
+.board_content a:hover{
+	color:#F00;
+}
+.poster,.replyer{
+	width:130px;
+	height:280px;
+	float:left;
+	background:#FAFBFC;
+}
+.content{
+	width:700px;
+	height:280px;
+	float:left;
+	position:relative;
+	
+}
+.postDetail,.replyDetail{
+	color:#3399CC;
+	text-align:left;
+	float:left;
+	width:750px;
+	position:absolute; 
+	bottom:0px; 
+	height:50px;
+	padding:0px;
+	/* margin-right:10px; */
+}
+
+.yinyong{
+	background:#3E98D4;
+	/* url(../images/home/bg_more.png) no-repeat */; 
+	width:75px;
+	height:25px;
+	text-align:center;
+	float:right;
+	color:#FFF; 
+	margin:10px 10px;
+	border-radius:2px;
+}
+/* .yinyong a{
+	font-size:14px;
+	
+}
+.yinyong a:hover{
+	color:#fff;
+} */
+.reply{
+	background:#FFF;
+	width:900px;
+	height:280px;
+	overflow:hidden;
+	float:left;
+	border-bottom:solid 1px #999;
+}
+
+.fenye{
+	background:#FFF;
+	width:900px;
+	height:50px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+}
+.writeReply{
+	background:#FFF;
+	width:900px;
+	height:auto;
+	overflow:hidden;
+	float:left;
+}
+
+.text-edit{
+	margin-top:20px;
+	height:600px;
+	width:700px;
+	background:#FFF;
+	margin-left:100px;
+}
+.post{
+	background:#FFF;
+	width:900px;
+	height:auto;
+	overflow:hidden;
+	float:left;
+	border-bottom:solid 1px #999;
+}
+
+.manageIndex{
+	background:#F2F2F2;
+	width:250px;
+	border:#999 solid 1px;
+	float:left;
+	
+}
+
+.manageIndex ul{
+	margin:40px 20px;
+	font-size:15px;
+	line-height:35px;
+}
+
+.manageForum{
+	width:940px;
+	float:left;
+}
+
+.boardIndex{
+	width:940px;
+	height:40px;
+	border-bottom:solid 1px #999;
+    float:left;
+
+}
+
+.forumTable{
+	width:940px;
+	height:auto;
+	float:left;
+}
+.forumTable table{
+	width:940px;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+
+.forumTable table td{
+	border-left:solid 1px #999;
+	border-top:solid 1px #999;
+}
+
+
+
+
+/* topics */
+
+.title{
+	
+	width:100%;
+	height:28px;
+	background:#FAFBFC;
+	color:#999;
+}
+
+.table1{
+	width:100%;
+	margin:0px 0px 8px;
+	border: 1px solid #A9CBEE;
+	height:280px;
+	background:#FAFBFC;
+}
+.forumTP{
+	width:100%;
+	margin:0px 0px 8px;
+	border: 1px solid #A9CBEE;
+	height:auto;
+	background:#FAFBFC;
+}
+#TPprocess,#TPresult{
+	width:70%;
+	height:80%;
+	margin:50px auto;
+}
+
+.wirter{
+	text-align: center;
+	max-width: 180px;
+	background: none repeat scroll 0% 0% #EFF4FB;
+	border-right: 1px solid #A9CBEE;
+}
+
+.user_head{
+	margin: 0px auto;
+	padding: 10px 0px 10px 26px;
+	text-align: left;
+	position: relative;
+    width: 127px;
+}
+
+.jinyan{
+	color:#3399CC;
+}
+
+.username,.replyer_name{
+	margin-top: 6px;
+	font-weight: bold;
+}
+
+.level{
+	line-height: 24px;
+	font-weight: normal;
+}
+
+.post_info{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+	border: medium none;
+	outline: 0px none;
+}
+
+.data{
+	border-bottom: 1px solid #A9CBEE;
+	padding: 0px 10px;
+	height: 24px;
+	background: none repeat scroll 0% 0% #EFF4FB;
+}
+
+.post_body,.reply_body{
+	width: 700px;
+	outline: 0px none;
+	border: medium none;
+	padding: 0px;
+	margin: 0px;
+	list-style: none outside none;
+}
+
+.control{
+	height: 28px;
+	background: none repeat scroll 0% 0% #EFF4FB;
+	border-top: 1px solid #A9CBEE;
+	padding: 0px 10px;
+	line-height: 28px;
+}
+
+.editor{
+	position:relative;
+	margin:20px auto;
+}
+.login1{
+	position:absolute;
+	z-index:9999;
+	line-height:30px;
+	top:50%;
+	margin-top:-15px;
+	text-align:center;
+	left:0px;
+}
+
+.mask{
+	width:100%;
+	height:100%;
+	background-color:#eee;
+	z-index:100;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:.2;
+	filter:alpha(opacity=20);
+}
+
+
+.labelIndex{
+	margin:5px 10px;
+	font-size:18px;
+	color:#00F;
+}

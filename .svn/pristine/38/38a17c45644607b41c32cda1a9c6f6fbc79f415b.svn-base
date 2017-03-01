@@ -1,0 +1,88 @@
+/*
+ * @freebie: search-bar
+ * @author: Francisco Neves
+ */
+
+* { outline: none !important; }
+a,  a:hover, a:active { text-decoration: none; color: inherit; }
+
+.more a:link {color:#FFFFFF;text-decoration:none;}		/* 未被访问的链接 */
+.more a:visited {color:#FFFFFF;text-decoration:none;}	/* 已被访问的链接 */
+.more a:hover {color:#FFFFFF;text-decoration:none;}	/* 鼠标指针移动到链接上 */
+.more a:active {color:#FFFFFF;text-decoration:none;}   /* 正在被点击的链接 */
+
+
+div.search-bar
+{	
+	display: table;
+	padding: 0px;
+	//border: 1px solid #959595;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+/*	background: rgba(227,227,227,1);
+	background: -moz-linear-gradient(top, rgba(227,227,227,1) 0%, rgba(207,207,207,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(227,227,227,1)), color-stop(100%, rgba(207,207,207,1)));
+	background: -webkit-linear-gradient(top, rgba(227,227,227,1) 0%, rgba(207,207,207,1) 100%);
+	background: -o-linear-gradient(top, rgba(227,227,227,1) 0%, rgba(207,207,207,1) 100%);
+	background: -ms-linear-gradient(top, rgba(227,227,227,1) 0%, rgba(207,207,207,1) 100%);
+	background: linear-gradient(to bottom, rgba(227,227,227,1) 0%, rgba(207,207,207,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#cfcfcf', GradientType=0 );
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,1);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,1);
+	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,1);*/
+}
+
+div.search-bar > .input > input
+{
+	margin: 0;
+	border: 1px solid #959595;
+	border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	padding: 8px;
+	padding-left: 45px;
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(255,255,255,.4), inset 0px 6px 5px -6px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 0px 0px rgba(255,255,255,.4), inset 0px 6px 5px -6px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 0px 0px rgba(255,255,255,.4), inset 0px 6px 5px -6px rgba(0,0,0,0.5);
+	color: #a8a8a8;
+	background: #fff url(../images/home/icon_search.png)  no-repeat 10px;
+	border-right: 0px;
+}
+
+div.search-bar > .button > input[type=submit]
+{
+	margin: 0;
+	border: 1px solid #6ca2ba;
+	border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	padding: 8px;
+	background: rgba(173,210,226,1);
+	background: -moz-linear-gradient(top, rgba(173,210,226,1) 0%, rgba(149,187,208,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(173,210,226,1)), color-stop(100%, rgba(149,187,208,1)));
+	background: -webkit-linear-gradient(top, rgba(173,210,226,1) 0%, rgba(149,187,208,1) 100%);
+	background: -o-linear-gradient(top, rgba(173,210,226,1) 0%, rgba(149,187,208,1) 100%);
+	background: -ms-linear-gradient(top, rgba(173,210,226,1) 0%, rgba(149,187,208,1) 100%);
+	background: linear-gradient(to bottom, rgba(173,210,226,1) 0%, rgba(149,187,208,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add2e2', endColorstr='#95bbd0', GradientType=0 );
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.4);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.4);
+	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.4);
+	color: #2f627d;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+div.search-bar > .button > input[type=submit]:hover
+{
+	background: #96bbcd;
+}
+
+div.search-bar > .button > input[type=submit]:active
+{
+	background: #96bbcd;
+	-webkit-box-shadow: inset 0px 6px 5px -6px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 6px 5px -6px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 6px 5px -6px rgba(0,0,0,0.5);
+}

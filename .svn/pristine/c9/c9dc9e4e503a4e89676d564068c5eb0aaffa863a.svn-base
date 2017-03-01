@@ -1,0 +1,137 @@
+*{
+	font-family:"Microsoft YaHei", "New York", serif;
+	margin:0;
+	padding:0;
+	
+	
+}
+body{
+	margin:0 auto;
+	overflow:scroll;
+	background:url(../images/home/bg_body.jpg);
+
+}
+.Pnav{
+	margin:10px auto;
+	
+	width:900px;
+	height:80px;
+	background:#FFF;
+	position:relative;
+}
+.Pnav_left{
+	float:left;
+	width:900px;
+} 
+.Pnav_btn{
+	padding:4px 0;
+	margin:0;
+	overflow:hidden;
+	margin-left:5px;
+	font-size:18px; 
+	text-align:left;
+	}
+ 
+.Pnav_btn li{
+	text-align:center;
+	
+	width:130px;
+	list-style-type:none;
+	line-height:60px;
+	display:inline;
+	height:28px;
+	display:inline;
+	
+	padding:13px 20px;
+	cursor: pointer;
+	border-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	text-align: center;
+
+	
+	}
+.Pnav_left a:link,.Pnav_left a:visited{
+	color:#66CCFF;
+	text-decoration:none;
+}
+.Pnav_left a:hover,.Pnav_left a:active{
+	color:#FF0000;
+	text-decoration:none;
+}
+.main{
+	margin:10px auto;
+	text-align:left;
+	width:900px;
+	height:460px;
+	background:#FFF;
+	position:relative;
+
+}
+.main_top h3{
+
+
+	
+}
+.choose a:link, .choose a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+.u1 .l2{
+	background-color: #fff;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-top: 2px solid #cc0000;
+	position: relative;
+	margin-top: 11px;
+}
+.choose{
+
+	height: 43px;
+	border-bottom: 1px solid #cccccc;
+	padding-left: 10px;;
+}
+.choose ul .choose li{
+	margin-left: 10px;
+	height: 27px;
+	padding-top: 8px;
+	background-color: #fff;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-top: 2px solid #cc0000;
+	position: relative;
+	margin-top: 11px
+
+}
+.choose ul{
+	height: 43px;
+	border-bottom: 1px solid #cccccc;
+	padding-left: 10px;
+}
+.choose li{
+	width: 88px;
+	height: 32px;
+	float: right;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	line-height: 32px;
+	margin-top: 10px;
+	cursor: pointer;
+	display: list-item;
+	font-size: 14px;
+
+}
+.tpassword{
+	margin-left:140px;
+}
+li{
+	list-style-type:none;
+}
+
+p{
+	text-align:center;
+}

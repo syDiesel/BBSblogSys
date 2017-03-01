@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body{
+	text-align:center;
+}
+.mainbox{
+	width:1050px;
+	margin:10px auto;
+	background:url(../../../images/Forums/new/back.png);
+	border-top:#087ec4 3px solid;
+	min-height:400px;
+	display:inline-block;
+}
+
+.manageForum{
+	width:880px;
+	float:left;
+	margin-left:10px;
+}

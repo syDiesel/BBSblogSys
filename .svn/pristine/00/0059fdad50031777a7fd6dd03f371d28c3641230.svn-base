@@ -1,0 +1,1000 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Post details</title>
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+
+<link type="text/css" href="<%=basePath%>css/button.css" rel="stylesheet" />
+<link type="text/css" href="<%=basePath%>css/Forums1/MASK/mask.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="<%=basePath %>css/Forums1/style_11_common.css"/>
+<link rel="stylesheet" type="text/css" href="<%=basePath %>css/Forums1/style_11_forum_viewthread.css"/>
+
+
+
+
+<script src="<%=basePath%>js/Forum/topics.js"></script>
+<script type="text/javascript"
+	src="<%=basePath%>js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/index/index.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/index/language.js"></script>
+<script src="<%=basePath%>js/Forum/topics.js"></script>
+<script charset="utf-8" src="<%=basePath%>kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="<%=basePath%>kindeditor/lang/zh_CN.js"></script>
+<script charset="utf-8"
+	src="<%=basePath%>kindeditor/plugins/code/prettify.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/login_all.js"></script>
+	
+<link type="image/x-icon" href="<%=basePath%>img/bitbug_favicon.ico"
+	rel="shortcut icon" />
+
+<link href="<%=basePath%>css/headfoot.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/index_default.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/Index/index.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/qiantai/login.css" rel="stylesheet" type="text/css" />
+
+
+<script>
+     var editor;
+	 KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="replyContent"]', {
+			cssPath : '<%=basePath%>kindeditor/plugins/code/prettify.css',
+			uploadJson : '<%=basePath%>kindeditor/jsp/upload_json.jsp',
+			fileManagerJson : '<%=basePath%>kindeditor/jsp/file_manager_json.jsp',
+			//简单模式
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+			items : [
+						'source','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+
+			//图片空间管理
+			//allowFileManager : true,
+			autoHeightMode : false,
+			 
+			afterCreate : function() {
+				this.loadPlugin('autoheight');
+				var self = this;
+				K.ctrl(document, 13, function() {
+					self.sync();
+					document.forms['example'].submit();
+				});
+				K.ctrl(self.edit.doc, 13, function() {
+					self.sync();
+					document.forms['example'].submit();
+				});
+			},afterChange:function(){
+			     if(this.count('text')<10)
+			     {
+			         $("#button").attr("disabled", true);
+			     }else{
+			         $("#button").attr("disabled", false);
+			     }
+			     var limitNum = 2000;  //设定限制字数
+                 var pattern = "You can also enter " + limitNum + " words";
+                 $('.word_surplus').html(pattern+"<font style='color:red;'>[the reply must be at least 10 words and score when more than 100 words]</font>"); //输入显示
+                 if(this.count('text') > limitNum) {
+                 pattern = ("Count exceeds the limit");
+                 $("#button").attr("disabled", true);   
+                  } else {
+                 //计算剩余字数
+                 var result = limitNum - this.count('text');
+                 pattern = "You can also enter " +  result + " words";
+                 }
+                 $('.word_surplus').html(pattern+"<font style='color:red;'>[the reply must be at least 10 words and score when more than 100 words]</font>"); //输入显示
+       
+			},afterBlur: function(){this.sync();}
+			
+			
+			
+		});
+   
+	  
+		prettyPrint();
+
+	}); 
+	
+	
+	
+	var a ={"a":"<fmt:message key="还可以输入"></fmt:message>"};
+	var a1 ={"a1":"<fmt:message key="字"></fmt:message>"};
+	var a2 ={"a2":"<fmt:message key="字数超过限制"></fmt:message>"};
+	var a3 ={"a3":"<fmt:message key="投票还未开始"></fmt:message>"};
+	var a4 ={"a4":"<fmt:message key="投票已结束"></fmt:message>"};
+	var a5 ={"a5":"<fmt:message key="请选择所投选项"></fmt:message>"};
+	var a6 ={"a6":"<fmt:message key="您的等级不够，需要支付一颗灵丹"></fmt:message>"};
+	var a7 ={"a7":"<fmt:message key="你确定支付一颗灵丹吗"></fmt:message>"};
+	var a8 ={"a8":"<fmt:message key="灵丹不够，请充值"></fmt:message>"};
+	var a9 ={"a9":"<fmt:message key="字数不合格"></fmt:message>"};
+	var a10 ={"a10":"<fmt:message key="请选择是否通过审核"></fmt:message>"};
+	var a11 ={"a11":"<fmt:message key="您已评价过，请不要重复评价"></fmt:message>"};
+	var a12 ={"a12":"<fmt:message key="此操作需要扣除一颗灵丹，您确定执行"></fmt:message>"};
+	var a13 ={"a13":"<fmt:message key="确定执行该操作"></fmt:message>"};
+
+
+	 
+	
+</script>
+
+
+  </head>
+  
+ <body style="font-family:Arial,verdana,tahoma;">
+<input type="hidden" id="msg" value="${msg}"/>
+<input type="hidden" id="userLevel" value="${userInfo.userLevel}"/>
+<input type="hidden" id="replyAccess" value="${post.replyAccess}"/>
+<input type="hidden" id="lingdan" value="${userInfo.lingdan}"/>
+<input type="hidden" id="jinzhuan" value="${userInfo.jinzhuan}"/>
+<input type="hidden" id="poster_id" value="${post.userInfo.id}"/>
+<input type="hidden" id="userInfo_id" value="${userInfo.id}"/>
+<input type="hidden" id="basePath" value="basePath"/>
+
+
+
+
+<!---------------------------login_begin  ------------------------->
+<div id="main_login" class="main_login">
+  </div>
+  <div class="login_div" id="login_div">
+        <div class="login_head">
+          <h1>login</h1>
+          <span class="login_head_right">
+              <span class="login_head_right_none">no account</span>&nbsp;&nbsp;&nbsp;<a href="<%=basePath%>isAgree.do">register</a>
+          </span>
+        </div>
+        <div class="login_form">
+           <form action="<%=basePath %>login.do" method="post">
+            <input type="hidden" value="" id="login_href" name="login_href">
+              <table>
+                  <tr>
+                     <td>
+                         <input type="text" name="userName" placeholder="user name" class="login_td">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                         <input type="password" name="password" placeholder="cipher" class="login_td">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                          <input class="login_but" accesskey="l" value="login" tabindex="5" type="submit">
+                          <!-- <span class="login_span"><input type="checkbox" name="">in login</span> -->
+                          <span class="login_span"><a href="<%=basePath%>ToGetBackPwd.do">forget cipher？</a></span>
+                     </td>
+                  </tr>
+              </table>
+           </form>
+        </div>
+        <div class="login_other">
+           <p>login other way</p>
+           <div style="width:380px;height:80px;padding-top:20px;">
+               <button class="login_sina"></button>
+               <button class="login_qq"></button>
+           </div>
+        </div>
+      </div>
+    <!---------------------------login_end  ------------------------->
+	<!--head begin-->
+	<div ID="head" class="head">
+		<!--top-->
+		<div id="top" class="top">
+			<div class="top-btn-left">
+				<a href="javascript:AddFavorite(window.location,document.title)">save us</a>
+				<!-- <a href="javascript:void(0)">contact us</a> -->
+			</div>
+
+			<div class="top-btn-right">
+
+				<!-- <div class="language">
+					<a href="javascript:changeLocale('locale=zh_CN')">简</a> 
+					<a href="javascript:changeLocale('locale=zh_TW')">繁</a>
+					<a href="javascript:changeLocale('locale=en_US')">EN</a>
+				</div>  -->
+				<c:if test="${!empty userInfo }">
+					<div class="user-btn">
+						<ul>
+							<span class="ban">&nbsp;</span>
+							<li id="personPic"><a><img
+									src="<%=basePath%>${userInfo.headImg}" width="20" height="20" />
+							</a>
+								<div class="personInfo" id="personInfo">
+									<div class="personInfoPart1">
+										<a href="<%=basePath%>web/Blog/${userInfo.nickName}"> <img
+											src="<%=basePath%>${userInfo.headImg}" width="90" height="90" />
+										</a>
+										<div class="personInfoDetail">
+											<p>
+											<h3>${userInfo.nickName}</h3>
+											</p>
+											<p>
+
+												<span>level:</span>
+
+												<c:forEach begin="1" end="${userInfo.userLevel}" step="1">
+													<img src="<%=basePath%>images/Forums/star.png" width="10px"
+														height="10px" />
+												</c:forEach>
+												<c:forEach begin="${userInfo.userLevel+1}" end="7" step="1">
+													<img src="<%=basePath%>images/Forums/0star.png"
+														width="10px" height="10px" />
+												</c:forEach>
+
+											</p>
+											<br /> <a class="pConfig"
+												href="<%=basePath%>u/detail/${userInfo.id}.html"><span
+												class="icon-pConfig"></span>edit</a>
+										</div>
+									</div>
+									<div class="personInfoPart2">
+										<div class="config">
+											<a href="<%=basePath%>u/setting/password"><span
+												class="icon-cog"></span>setting</a>
+
+										</div>
+										<div class="logout">
+											<a href="<%=basePath%>logout.do" title="exit"><span
+												class="icon-logout"></span>
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+
+							<span class="ban">&nbsp;</span>
+							<li style="height: 30px;"><div class="config">
+									<a href="<%=basePath%>/web/PrivateMsg/RecBox"><span
+										class="icon-msg"></span><em>${newMsgCount }</em>
+									</a>
+
+								</div>
+							</li>
+							<span class="ban">&nbsp;</span>
+						</ul>
+
+
+
+					</div>
+				</c:if>
+
+
+
+
+				<div class="charge">
+					<c:if test="${empty userInfo }">
+						<span class="ban">&nbsp;</span>
+						<a href="javascript:void(0)" id="login_all">log in</a>
+						<span class="ban">&nbsp;</span>
+						<a href="<%=basePath%>isAgree.do">register</a>
+					</c:if>
+					<span class="ban">&nbsp;</span> <a
+						href="<%=basePath%>ToGetBackPwd.do">find cipher</a> <span class="ban">&nbsp;</span>
+					<a href="javascript:void(0)">voucher center</a> <span class="ban">&nbsp;</span>
+				</div>
+			</div>
+			<!---top-btn-right  end-->
+		</div>
+		<!--top end-->
+		<!--logo-->
+		<div class="logo">
+			<div class="yszs">
+				<a href="#"><img src="<%=basePath%>img/Index-logo.png" />
+				</a>
+			</div>
+			<div class="searchBanner">
+				<FORM name="search_form_1" id="search_form_1"
+					action="<%=basePath%>search.do">
+					<DIV class="search-text-con2">
+						<INPUT name="search" class="search-text2" id="q1" type="text"
+							value="" autocomplete="off" path="q" placeholder="input keyword">
+						<input type="hidden" id="txtSear" value="0" name="searchMethod" />
+					</DIV>
+					<DIV class="search-btn-con2">
+						<INPUT class="search-btn2" type="submit" value="search">
+					</DIV>
+				</FORM>
+			</div>
+			<div class="app">
+				<a href="javascript:void(0)"></a>
+				<h3 style="font-size:14px;">app download</h3>
+			</div>
+
+		</div>
+		<!--logo end-->
+		<!--nav-->
+		<div class="nav">
+			<ul>
+				<li><a href="<%=basePath%>toIndexHome">frontpage</a></li>
+				<li><a href="<%=basePath%>web/Blog/index.html">blog</a></li>
+				<li><a href="<%=basePath%>listPostByBoard">forum</a></li>
+				<li><a href="<%=basePath%>web/QandA/Home.html">Q & A</a></li>
+				<li><c:if test="${userInfo.role.id!=1 }">
+						<a href="<%=basePath%>contact.do">service center</a>
+						</c:if>
+						<c:if test="${userInfo.role.id==1 }">
+						<a href="<%=basePath%>toManagement">supervision</a>
+						</c:if></li>
+				<li><a href="<%=basePath%>faq.do">regulation</a></li>
+			</ul>
+		</div>
+		<!--nav end-->
+		<!--pic-->
+		<div class="Logo_pic"></div>
+		<!--pic end-->
+
+
+
+	</div>
+	<!--head end-->
+<div id="wp" class="wp" style="background-color:#fff;width:1050px;margin-top:5px;font-family:'微软雅黑';">
+
+<div id="ct" class="wp cl">
+<div id="pgt" class="pgs mbm cl" style="background: #087EC4;height:40px;">
+
+<a href="addPost?board_id=${post.board.id}" id="newspecial" class="submitButton"
+ style="margin-top:5px; background:#26bdd8;">
+Post
+</a>
+<a href="#writeReply" onclick="reply()" id="newspecial"class="submitButton" 
+style="margin-top:5px;background:#96ca4e;">
+Reply
+</a>
+
+<c:if test="${userInfo!=null}">
+<a href="forumJubao.do?postId=${post.id}" id="newspecial"class="submitButton" 
+style="margin-top:5px;background:#26bdd8;">
+Report
+</a>
+</c:if>
+
+
+<c:if test="${trueMaster==true}">
+          <c:choose>
+        <c:when test="${post.postStatus.id==5}">
+        <a href="toUnLockForumTopics?post_id=${post.id }" onclick="return confirmLock()" 
+        id="newspecial"class="submitButton" style="margin-top:5px;background:#96ca4e;">
+        Release</a>
+        </c:when>
+        <c:otherwise>
+        <a href="toLockForumTopics?post_id=${post.id }" onclick="return confirmLock()"
+        id="newspecial"class="submitButton" style="margin-top:5px;background:#96ca4e;">
+        Locked</a>
+        </c:otherwise>
+     </c:choose>
+  </c:if>
+  
+  
+  <div class="pg">
+  <a href="listPostByLabel?board_id=${post.board.id}&record=1"
+   style="float:right;color:#fff;background:#1191ca;">
+  Back to list</a></div>
+</div>
+
+
+<div class="index_guide">
+<ul class="guide_font">
+<li><a href="<%=basePath%>listPostByBoard">Forum Homepage</a></li>
+<li><a href="listPostByLabel?board_id=${post.board.id}&record=1">List</a></li>
+<li>Post</li>
+</ul>
+</div>
+
+
+<div id="postlist" class="pl bm bmw">
+
+
+<!-- --------------------------------------帖子内容------------------------------------------ -->
+<c:if test="${record==1 }">
+<div id="post_60917056"><table style="text-align:center;width:1048px;">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div class="authi">
+<a href="<%=basePath%>web/Blog/${post.userInfo.nickName}" target="_blank" class="xw1">
+${post.userInfo.nickName}
+</a>
+
+</div>
+
+<div>
+<div class="avatar" ><a href="<%=basePath %>web/Blog/${post.userInfo.nickName}" target="_blank">
+<img src="${post.userInfo.headImg}" width="120" height="120"/>
+</a></div>
+                           <span class="uLevel">
+									<c:forEach begin="1" end="${post.userInfo.userLevel}" step="1">
+												<img src="<%=basePath%>images/Forums/new/star1.png" width="13px"
+													height="14px" />
+											</c:forEach>
+											<c:forEach begin="${post.userInfo.userLevel+1}" end="7" step="1">
+												<img src="<%=basePath%>images/Forums/new/star2.png" width="13px"
+													height="14px" />
+											</c:forEach>
+							</span>
+			
+		<div style="width:80%;height:20px;border-bottom:#999 1px dashed;margin:0px auto;"></div>				
+		
+</div>
+
+
+<table class="topics_userInfo" style="width:80%;" >
+<tr>
+<td>Respect:&nbsp;<span class="yangmu${post.userInfo.id}" title="${post.userInfo.yangmu}">${post.userInfo.yangmu}</span>
+&nbsp;&nbsp;</td>
+<td>Flowers:&nbsp;<span class="xianhua${post.userInfo.id}" title="${post.userInfo.xianhua}">${post.userInfo.xianhua}</span>
+&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>Golden Brick:&nbsp;<span class="jinzhuan${post.userInfo.id}" title="${post.userInfo.jinzhuan}">${post.userInfo.jinzhuan}</span>
+&nbsp;&nbsp;</td>
+<td>Post:&nbsp;<span title="${forumCount}">${forumCount}</span>
+&nbsp;&nbsp;</td>
+</tr>
+
+</table>
+
+<div class="user_otherInfo">
+<a href="<%=basePath %>permission.do?blId=${post.userInfo.id}">
+<img src="<%=basePath%>images/Forums/new/tubiao1.png" width="25px" height="22px" style="float:left;"/>
+<span style="float:left;">Certificate
+
+</span>
+</a>
+<a href="<%=basePath %>web/Blog/${post.userInfo.nickName}#interestBlogBtn" >
+<img src="<%=basePath%>images/Forums/new/tubiao2.png" width="25px" height="22px" style="float:left;"/>
+<span style="float:left;">
+<c:if test="${userInfo.id==post.userInfo.id&&userInfo!=null}">My</c:if>
+<c:if test="${userInfo.id!=post.userInfo.id||userInfo==null}">His</c:if>
+Blog
+</span>
+</a>
+<a href="<%=basePath %>web/Blog/${post.userInfo.nickName}#attach">
+<img src="<%=basePath%>images/Forums/new/tubiao3.png" width="25px" height="22px" style="float:left;"/>
+<span style="float:left;">
+<c:if test="${userInfo.id==post.userInfo.id&&userInfo!=null}">My</c:if>
+<c:if test="${userInfo.id!=post.userInfo.id||userInfo==null}">His</c:if>
+Resourse</span>
+</a>
+<a href="<%=basePath %>web/Blog/${post.userInfo.nickName}#interestQuestionBtn">
+<img src="<%=basePath%>images/Forums/new/tubiao4.png" width="25px" height="22px" style="float:left;"/>
+<span style="float:left;">
+<c:if test="${userInfo.id==post.userInfo.id&&userInfo!=null}">My</c:if>
+<c:if test="${userInfo.id!=post.userInfo.id||userInfo==null}">His</c:if>
+Q&A</span>
+</a>
+<a href="<%=basePath %>web/Blog/${post.userInfo.nickName}#hotLabel">
+<img src="<%=basePath%>images/Forums/new/tubiao5.png" width="25px" height="22px" style="float:left;"/>
+<span style="float:left;">Active Tag</span>
+</a>
+</div>
+
+
+<div class="user_hudong">
+<c:if test="${userInfo.id!=post.userInfo.id&&userInfo!=null}">
+		<div>
+         <c:choose>
+            <c:when test="${postFriend==1}">
+            <a href="deleteFriend?guest_id=${post.userInfo.id}&post_id=${post.id}&record=${record}"
+            class="submitButton1" style="color:#333;background:#e5e4e2;padding:3px 5px;">           
+            <font>Unfollow</font>  
+            </a></c:when>
+            <c:when test="${postFriend==0}">
+            <a href="saveFriend?guest_id=${post.userInfo.id}&post_id=${post.id}&record=${record}"
+            class="submitButton1" style="background:#F98C89;">            
+          <font>Follow</font>  
+            
+            </a></c:when>
+         </c:choose>
+         
+         <a href="<%=basePath %>web/Blog/receiver.do?id=${post.userInfo.id}"
+         class="submitButton1" style="margin-left:13px;">        
+          <font>
+           Private Message</font>          
+          </a>
+          </div>
+          
+        <div style="margin-top:5px;">
+        <c:if test="${userInfo.personalInfo.sex.equals(post.userInfo.personalInfo.sex)&&userInfo.id!=post.userInfo.id&&userInfo.personalInfo.sex!=null&&post.userInfo.personalInfo.sex!=null}">
+          <a href="javascript:void(0);" class="submitButton1" 
+          style="margin-top:5px;" onclick="YMorSH('songhua','post','${post.userInfo.id}','${post.userInfo.xianhua}')" >          
+          Send Flowers          
+          </a>
+          </c:if>
+          
+         
+          <c:if test="${userInfo.personalInfo.sex!=null&&post.userInfo.personalInfo.sex!=null&&userInfo.id!=post.userInfo.id&&!userInfo.personalInfo.sex.equals(post.userInfo.personalInfo.sex)}">
+            <a href="javascript:void(0);" class="submitButton1" style="margin-top:5px;background:#26bdd8;" onclick="YMorSH('yangmu','post','${post.userInfo.id}','${post.userInfo.yangmu}')">                       
+            Respect
+            </a>
+          </c:if>
+          
+         
+          
+          
+          <c:if test="${trueMaster==true}">
+          <a href="setNotSay?forumUser_id=${post.userInfo.id}" 
+          class="submitButton1" style="margin-top:5px;margin-left:11px;background:#dedede;color:#333;">
+          Gag</a></c:if>
+                             
+          </div></c:if> 
+</div>
+
+
+</td>
+<td class="plc">
+
+<div class="pi" style="height:60px;text-align:center;">
+<font style="font-size:18px;font-weight:bold;color:#333;">${post.subject}</font><br/>
+<div >
+Issueed on:${post.postDate}&nbsp;&nbsp;&nbsp;&nbsp;
+Tag:<c:forEach items="${listLabel}" var="items">
+<a href="<%=basePath%>search.do?search=${items.label.labelName}&searchMethod=0&lab=1&sub=1&con=1">
+${items.label.labelName}</a>;
+
+</c:forEach>
+&nbsp;&nbsp;&nbsp;
+<c:if test="${focus=='poster' }">
+<a href="<%=basePath%>listReplyByPostId?post_id=${post.id}&record=1"
+ style="color:#087ec4;">
+[See All]
+</a>&nbsp;&nbsp;&nbsp;
+</c:if>
+<c:if test="${focus=='replywell' }">
+<a href="<%=basePath%>listReplyByPostId?post_id=${post.id}&record=1"
+ style="color:#087ec4;">
+[Time Rank]
+</a>&nbsp;&nbsp;&nbsp;
+</c:if>
+<c:if test="${focus=='all' }">
+<a href="<%=basePath%>listReplyByPostId?post_id=${post.id}&record=1&focus=poster"
+ style="color:#087ec4;">
+[See Only Issuer]
+</a>&nbsp;&nbsp;&nbsp;
+<a href="<%=basePath%>listReplyByPostId?post_id=${post.id}&record=1&focus=replywell" 
+style="color:#087ec4;">[Scores Rank]</a>
+</c:if>
+&nbsp;&nbsp;&nbsp;
+
+<img src="<%=basePath%>images/Forums/new/visitcount.png"
+ width="16px" height="12px"/>&nbsp;
+ <em style="color:#b8c4ce;">${post.postCount}</em>&nbsp;&nbsp;&nbsp;
+ <img src="<%=basePath%>images/Forums/new/replycount.png"
+ width="16px" height="12px"/>&nbsp;
+ <em style="color:#b8c4ce;">${post.replyCount}</em>
+</div>
+</div><div class="pct  post_content" style="text-align:left;word-wrap: break-word;word-break:break-all; ">
+${post.postContent}
+</div>
+
+<style>
+.post_content img{
+max-width:700px;
+}
+</style>
+
+<!-- 投票部分 -->
+<div style="margin:30px 30px; text-align:left;border:#999 1px dashed;width:700px;" id="displayTP">
+<c:if test="${record==1&&!msg.equals('noTP')}">
+ <div class="forumTP">
+ <div id="TPmsg" style="margin:0px auto;line-height:30px;height:30px;width:300px;color:red;font-size:15px;"></div>
+ <form action="addTP?post_id=${post.id}" method="post">
+ <c:if test="${listForumTP.size()>0}">
+   <table id="TPprocess" style="margin:20px auto;width:60%;">
+   <tr><td colspan="2" style="color:#087ec4;font-size:14px;text-align:center;">${listForumTP.get(0).TPtitle}</td></tr>
+       <c:forEach items="${listForumTP}" var="TP">
+        <tr>
+           <td style="width:20px;">
+           <c:if test="${TP.other.equals('many')}">
+           <input type="checkbox" name="forumTP" value="${TP.id}" id="forumTPcheck" 
+           <c:if test="${!msg.equals('0')}">disabled="disabled"</c:if> />
+           </c:if>
+           <c:if test="${TP.other.equals('one')}">
+           
+           <input type="radio" name="forumTP" value="${TP.id}" 
+           id="forumTPcheck" <c:if test="${!msg.equals('0')}">disabled="disabled"</c:if>/></c:if></td>
+           <td style="width:390px;">${TP.TPsubject}</td>
+        </tr>
+       </c:forEach>
+       <tr><td colspan="2">
+       <input class="submitButton" id="TPbutton" type="submit" value="Vote" style="float:right;margin-right:20px;margin-bottom:20px;" onclick=" return addTP()"/>
+       </td></tr>
+   </table>
+   </c:if>
+ </form>
+   <table style="width:600px;display:none;margin:20px 40px;"   id="TPresult">
+    <tr><td colspan="3" style="color:#087ec4;font-size:14px;text-align:center;">${listForumTP.get(0).TPtitle}</td></tr>
+       <c:forEach end="${listForumTP.size()}" begin="1" var="i" step="1">
+        <tr>
+           <td style="width:400px;word-wrap: break-word;word-break:break-all;text-align:right; ">${listForumTP.get(i-1).TPsubject}</td>
+           <td style="width:200px;"><img src="images/Forums/tp.png" style="width:${percentageCount.get(i-1)}%;height:15px;"/></td>
+           <td style="widrh:100px;">&nbsp;&nbsp;&nbsp;&nbsp;[${listForumTP.get(i-1).TPcount}]&nbsp;&nbsp;${percentageCount.get(i-1)}%</td>
+        </tr>
+       </c:forEach>
+   </table>
+  
+ </div>
+ </c:if>
+   
+</div>
+<!-- 投票结束 -->
+
+
+<!-- 相关帖部分开始 -->
+<c:if test="${relateForum.size()>0&&!post.postType.equals('origin') }">
+<div style="margin:30px 30px; text-align:left;border:#999 1px dashed;">
+<font style="font-size:15px;color:blue;">Related Post:</font><br/>
+<table style="table-layout:fixed;width:700px;margin:20px auto;">
+<c:forEach items="${relateForum}" var="relateForum">
+<tr><td style="width:400px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${relateForum.subject}">
+<a href="<%=basePath%>toTopics?post_id=${relateForum.id}">${relateForum.subject}</a></td>
+<td style="width:150px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;text-align:center;" title="${relateForum.userInfo.nickName}">
+<a href="<%=basePath%>web/Blog/${relateForum.userInfo.nickName}">${relateForum.userInfo.nickName}</a></td>
+<td style="width:150px;">${relateForum.postDate}</td>
+</tr>
+</c:forEach>
+</table>
+</div>
+</c:if>
+<!-- 相关帖部分结束 -->
+
+</td></tr>
+<tr><td class="plc plm">
+
+
+</td>
+</tr>
+<tr>
+<td class="pls"></td>
+<td class="plc">
+<div class="po">
+<div class="pob">
+<em>
+<a class="fastre" href="#writeReply" onclick="reply()">Reply</a>
+ <c:if test="${trueMaster==true||userInfo.id==post.userInfo.id}"><a href="deletePost?p_id=${post.id}"
+  onclick="return confirmDel()">Delete</a></c:if>
+</em>
+<span style="float:right;margin-top:5px;">Reply Permission:${replyAccess}&nbsp;Star User</span>
+</div>
+</div>
+
+</td>
+</tr>
+<tr class="ad">
+<td class="pls"></td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div>
+</c:if>
+
+
+<!-- --------------------------------------回复部分------------------------------------------ -->
+
+ <c:if test="${listReply!=null}">
+     
+            <%		
+		int record=Integer.parseInt(request.getAttribute("record").toString());
+		int pageRecords=Integer.parseInt(request.getAttribute("pageRecords").toString());
+		int i =(record-1)*pageRecords;
+	   	i++;		   
+	%> 
+      
+     <c:forEach end="${listReply.size()}" begin="1" step="1" var="a">    
+<div id="post_60917056">
+<table id="pid60917056" class="fo" summary="pid60917056" cellpadding="0" cellspacing="0"
+style="width:1048px;">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div class="authi" style="text-align:center;">
+<a href="<%=basePath%>web/Blog/${listReply.get(a-1).userInfo.nickName}" target="_blank" class="xw1" id="nickName${listReply.get(a-1).id}">
+${listReply.get(a-1).userInfo.nickName}
+</a>
+
+</div>
+
+<div style="text-align:center;">
+<div class="avatar" >
+<a href="<%=basePath %>web/Blog/${listReply.get(a-1).userInfo.nickName}" target="_blank">
+<img src="${listReply.get(a-1).userInfo.headImg}" width="120" height="120"/>
+</a>                           
+</div>
+
+                           <span class="uLevel">
+									<c:forEach begin="1" end="${listReply.get(a-1).userInfo.userLevel}" step="1">
+												<img src="<%=basePath%>images/Forums/new/star1.png" width="13px"
+													height="14px" />
+											</c:forEach>
+											<c:forEach begin="${listReply.get(a-1).userInfo.userLevel+1}" end="7" step="1">
+												<img src="<%=basePath%>images/Forums/new/star2.png" width="13px"
+													height="14px" />
+											</c:forEach>
+							</span>
+			
+		<div style="width:80%;height:20px;border-bottom:#999 1px dashed;margin:0px auto;"></div>
+         
+         
+<div style="width:80%;margin:0px auto;">
+<table class="topics_userInfo" >
+<tr>
+<td>Respect:&nbsp;<span class="yangmu${listReply.get(a-1).userInfo.id}" title="${listReply.get(a-1).userInfo.yangmu}">
+${listReply.get(a-1).userInfo.yangmu}</span>
+&nbsp;&nbsp;</td>
+<td>Flowers:&nbsp;<span class="xianhua${listReply.get(a-1).userInfo.id}" title="${listReply.get(a-1).userInfo.xianhua}">
+${listReply.get(a-1).userInfo.xianhua}</span>
+&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>Golden Brick:&nbsp;<span class="jinzhuan${listReply.get(a-1).userInfo.id}" title="${listReply.get(a-1).userInfo.jinzhuan}">
+${listReply.get(a-1).userInfo.jinzhuan}</span>
+&nbsp;&nbsp;</td>
+<td>Post:&nbsp;<span title="${replyerForumCount.get(a-1)}">${replyerForumCount.get(a-1)}</span>
+&nbsp;&nbsp;</td>
+</tr>
+
+</table>
+</div>
+<div class="user_otherInfo" style="height:30px;">
+<a href="<%=basePath %>permission.do?blId=${listReply.get(a-1).userInfo.id}">
+<img src="<%=basePath%>images/Forums/new/tubiao1.png" width="25px" height="22px" style="float:left;"/>
+<span style="float:left;">Certificated</span>
+</a>
+</div>     
+
+
+<div class="user_hudong">
+<c:if test="${userInfo.id!=listReply.get(a-1).userInfo.id&&userInfo!=null}">
+		<div>
+         <c:choose>
+            <c:when test="${replyFriend.get(a-1)==1}">
+            <a href="deleteFriend?guest_id=${listReply.get(a-1).userInfo.id}&post_id=${post.id}&record=${record}"
+            class="submitButton1" style="color:#333;background:#e5e4e2;padding:3px 5px;">           
+            <font>Unfollow</font>  
+            </a></c:when>
+            <c:when test="${replyFriend.get(a-1)==0}">
+            <a href="saveFriend?guest_id=${listReply.get(a-1).userInfo.id}&post_id=${post.id}&record=${record}"
+            class="submitButton1" style="background:#F98C89;">            
+          <font>Follow</font>  
+            
+            </a></c:when>
+         </c:choose>
+         
+         <a href="<%=basePath %>web/Blog/receiver.do?id=${listReply.get(a-1).userInfo.id}"
+         class="submitButton1" style="margin-left:13px;">        
+          <font>
+           Private Message</font>          
+          </a>
+          </div>
+          
+          
+        
+          <div style="margin-top:5px;">
+          <c:if test="${userInfo.personalInfo.sex.equals(listReply.get(a-1).userInfo.personalInfo.sex)&&userInfo.id!=listReply.get(a-1).userInfo.id&&userInfo.personalInfo.sex!=null&&listReply.get(a-1).userInfo.personalInfo.sex!=null}">
+           <a href="javascript:void(0);"  class="submitButton1" style="margin-top:5px;"
+           onclick="YMorSH('songhua','post','${listReply.get(a-1).userInfo.id}','${listReply.get(a-1).userInfo.xianhua}')" >                     
+            Send Flowers
+            </a>
+          </c:if>
+          
+          
+          
+          <c:if test="${userInfo.personalInfo.sex!=null&&listReply.get(a-1).userInfo.personalInfo.sex!=null&&userInfo.id!=listReply.get(a-1).userInfo.id&&!userInfo.personalInfo.sex.equals(listReply.get(a-1).userInfo.personalInfo.sex)}">
+          <a href="javascript:void(0);" class="submitButton1" style="margin-top:5px;background:#26bdd8;"
+          onclick="YMorSH('yangmu','post','${listReply.get(a-1).userInfo.id}','${listReply.get(a-1).userInfo.yangmu}')">
+            Respect
+          </a>
+          </c:if>
+          
+         
+          
+          
+          <c:if test="${trueMaster==true}">
+          <a href="setNotSay?forumUser_id=${listReply.get(a-1).userInfo.id}"
+          class="submitButton1" style="margin-top:5px;margin-left:11px;background:#dedede;color:#333;">
+           Gag</a></c:if>
+                              
+         </div></c:if>
+</div> 	
+
+
+
+
+
+
+
+
+</td>
+<td class="plc">
+<div id="threadstamp"></div>
+<div class="pi">
+<strong>
+<a href="javascript:void(0);" id="fr${listReply.get(a-1).id}">Level<%=i++%></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi" style="float:left;">
+<img data-bd-imgshare-binded="1" class="authicn vm" id="authicon60917056" src="<%=basePath %>css/Forums1/online_member.gif"/>
+<em style="font-size:12px;">Reply on ${listReply.get(a-1).replyTime}</em>
+</div>
+</div>
+</div><div class="pct" style="text-align:left;word-wrap: break-word;word-break:break-all;  "
+ id="replyContent${listReply.get(a-1).id}">
+${listReply.get(a-1).replyContent}
+</div>
+</td></tr>
+<tr><td class="plc plm">
+
+<div class="user_comment">
+<a href="javascript:void(0);" class="comment_up"
+ onclick="comment('up','${listReply.get(a-1).id}','${listReply.get(a-1).up}')">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Good
+<span id="up${listReply.get(a-1).id}">${listReply.get(a-1).up}</span>
+</a>
+
+<a href="javascript:void(0);"  class="comment_normal"
+onclick="comment('normal','${listReply.get(a-1).id}','${listReply.get(a-1).normal}')">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SO SO
+<span id="normal${listReply.get(a-1).id}">${listReply.get(a-1).normal}</span>
+</a>
+
+<a href="javascript:void(0);"  class="comment_down"
+onclick="comment('down','${listReply.get(a-1).id}','${listReply.get(a-1).down}')">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sorry
+<span id="down${listReply.get(a-1).id}">${listReply.get(a-1).down}</span>
+</a>
+</div>
+
+</td>
+</tr>
+<tr>
+<td class="pls"></td>
+<td class="plc">
+<div class="po">
+<div class="pob cl">
+<em>
+<a class="fastre" href="#writeReply" onclick="reply()">Reply</a>
+<a href="#writeReply" class="req" id="quote" onclick="yinyong('${listReply.get(a-1).id}')">Quote</a>
+<c:if test="${userInfo.id==listReply.get(a-1).userInfo.id||trueMaster==true}">
+<a href="deleteReply?reply_id=${listReply.get(a-1).id}" onclick="return confirmDel()">Delete</a></c:if>
+</em>
+</div>
+</div>
+
+</td>
+</tr>
+<tr class="ad">
+<td class="pls"></td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div>
+</c:forEach>
+</c:if>
+
+
+
+
+
+
+
+
+<div class="pgs mtm mbm cl" style="height:30px;">
+<div class="pg">
+<!-- 此处设置分页 -->
+                         <c:if test="${record>1}">
+						<a href="listReplyByPostId?record=${record-1}&post_id=${post.id}">Last page</a>
+						</c:if>
+						
+					    <c:if test="${allPage<=10}">
+						<c:forEach begin="1" end="${allPage}" step="1" var="i">
+						      &nbsp; <a href="listReplyByPostId?record=${i}&post_id=${post.id}">
+						      
+						     <c:if test="${record==i}"> <b style="color:#3399CC;">${i}</b> </c:if> 
+						      <c:if test="${record!=i}"> <b style="color:#999;">${i}</b> </c:if> 
+						       </a>&nbsp;
+						</c:forEach>
+						</c:if>
+						
+						 <c:if test="${allPage>10}">
+						<c:forEach begin="${record-5}" end="${record+4}" step="1" var="i">
+						      &nbsp;<a href="listReplyByPostId?record=${i}&post_id=${post.id}">
+						     <c:if test="${record==i}"> <b style="color:#3399CC;">${i}</b> </c:if> 
+						      <c:if test="${record!=i}"> <b style="color:#999;">${i}</b> </c:if>
+						      </a>&nbsp;
+						</c:forEach>
+						</c:if>
+					
+						
+						 <c:if test="${record<allPage}">
+						<a href="listReplyByPostId?record=${record+1}&post_id=${post.id}">next page</a>
+                         </c:if>
+</div>
+<span class="pgb y" id="visitedforumstmp" >
+<a href="listPostByLabel?board_id=${post.board.id}&record=1">Back to list</a></span>
+</div>
+<div class="plc" style="background:#E5EDF2;height:5px;"></div>
+
+<div id="writeReply" class="writeReply" style="margin-top:20px;width:1050px;height:auto;overflow:hidden;">
+
+<form action="addReply?post_id=${post.getId()}&pay=false" method="post" name="form1" style="width:950px;margin:0px auto;">
+<input type="hidden" name="basePath" value="<%=basePath%>"/>
+              <c:if test="${userInfo!=null&&post.postStatus.id==4&&userInfo.isSay!='0'}">  
+              <div class="editor" style="width:950px;height:250px;margin:0px auto;">
+                                                        
+             <textarea id="replyContent"  cols="100" rows="8" name="replyContent"
+					style="width: 950px; height: 200px;" ></textarea>
+              <div class="login1" style="width:100%;">You’ve been banned from posting, the release time is ${userInfo.isSay}  </div>
+				 <div class="mask" ></div>
+				
+             </div> </c:if> 
+             
+             
+              <c:if test="${userInfo!=null&&post.postStatus.id==4&&userInfo.isSay=='0'}">                                               
+             <textarea id="replyContent1"  cols="100" rows="8" name="replyContent"
+					style="width: 950px; height: 200px;" ></textarea> 
+					 <span class="word_surplus" style="float:left;margin-top:5px;"></span> <br/><br/>
+			   <c:if test="${userInfo.userLevel<(post.replyAccess-1)}">
+			   low level, pay to reply
+			   <input type="radio" name="pay_type" id="check_lingdan"  value="lingdan" checked="checked"/>a panacea
+			   <input type="radio" name="pay_type" id="check_jinzhuan" value="jinzhuan"/>a brick
+			   </c:if>            
+				<p align="right" style=" margin-top:5px;">
+				<input type="submit"  
+				style="background:#ffca17;border:#e69b15 2px solid;
+				color:#9e6301;text-shadow: 1px 1px 0px #9E6301;padding:4px 30px;"
+				value="回复" onclick="return check()" id="button" class="submitButton" style="float:right;"/></p>
+				<br/><br/>
+              </c:if> 
+        
+           </form>
+           
+           
+           
+           <c:if test="${userInfo==null&&post.postStatus.id==4}">
+ 
+          
+				<div class="editor" style="width:950px;height:250px;margin:0px auto;">
+				        <textarea id="replyContent"  cols="100" rows="8" name="replyContent"
+					style="width: 950px; height: 200px;"></textarea>
+				       <div class="login1" style="width:100%;">You should log-in when you reply<a style="color:#0ff;"  
+				       href="<%=basePath%>backToPage${post.id}.do"><fmt:message key="Log-in"></fmt:message></a></div>
+                       <div class="mask" ></div>
+				</div>	
+				
+           </c:if>
+           
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+<!--footer-->
+
+	<div class="footer">
+		<h3>Copyright © 2014 JIE & C DEV(HK)CO L.&nbsp;&nbsp;All Rights
+			Reserved.</h3>
+	</div>
+	<!--footer end-->
+  </body>
+</html>

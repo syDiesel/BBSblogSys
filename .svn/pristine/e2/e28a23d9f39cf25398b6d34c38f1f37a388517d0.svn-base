@@ -1,0 +1,1699 @@
+body>.container {
+	line-height: 1.4285;
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+body>footer {
+	line-height: 1.4285;
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+body>header {
+	line-height: 1.4285;
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+body>.container blockquote {
+	line-height: 1.4285;
+}
+
+body>.container code {
+	line-height: 1.4285;
+}
+
+body>.container dd {
+	line-height: 1.4285;
+}
+
+body>.container div {
+	line-height: 1.4285;
+}
+
+body>.container dl {
+	line-height: 1.4285;
+}
+
+body>.container dt {
+	line-height: 1.4285;
+}
+
+body>.container fieldset {
+	line-height: 1.4285;
+}
+
+body>.container form {
+	line-height: 1.4285;
+}
+
+body>.container h1 {
+	line-height: 1.4285;
+}
+
+body>.container h2 {
+	line-height: 1.4285;
+}
+
+body>.container h3 {
+	line-height: 1.4285;
+}
+
+body>.container h4 {
+	line-height: 1.4285;
+}
+
+body>.container h5 {
+	line-height: 1.4285;
+}
+
+body>.container h6 {
+	line-height: 1.4285;
+}
+
+body>.container input {
+	line-height: 1.4285;
+}
+
+body>.container legend {
+	line-height: 1.4285;
+}
+
+body>.container li {
+	line-height: 1.4285;
+}
+
+body>.container p {
+	line-height: 1.4285;
+}
+
+body>.container pre {
+	line-height: 1.4285;
+}
+
+body>.container td {
+	line-height: 1.4285;
+}
+
+body>.container textarea {
+	line-height: 1.4285;
+}
+
+body>.container th {
+	line-height: 1.4285;
+}
+
+body>.container ul {
+	line-height: 1.4285;
+}
+
+body>footer blockquote {
+	line-height: 1.4285;
+}
+
+body>footer code {
+	line-height: 1.4285;
+}
+
+body>footer dd {
+	line-height: 1.4285;
+}
+
+body>footer div {
+	line-height: 1.4285;
+}
+
+body>footer dl {
+	line-height: 1.4285;
+}
+
+body>footer dt {
+	line-height: 1.4285;
+}
+
+body>footer fieldset {
+	line-height: 1.4285;
+}
+
+body>footer form {
+	line-height: 1.4285;
+}
+
+body>footer h1 {
+	line-height: 1.4285;
+}
+
+body>footer h2 {
+	line-height: 1.4285;
+}
+
+body>footer h3 {
+	line-height: 1.4285;
+}
+
+body>footer h4 {
+	line-height: 1.4285;
+}
+
+body>footer h5 {
+	line-height: 1.4285;
+}
+
+body>footer h6 {
+	line-height: 1.4285;
+}
+
+body>footer input {
+	line-height: 1.4285;
+}
+
+body>footer legend {
+	line-height: 1.4285;
+}
+
+body>footer li {
+	line-height: 1.4285;
+}
+
+body>footer p {
+	line-height: 1.4285;
+}
+
+body>footer pre {
+	line-height: 1.4285;
+}
+
+body>footer td {
+	line-height: 1.4285;
+}
+
+body>footer textarea {
+	line-height: 1.4285;
+}
+
+body>footer th {
+	line-height: 1.4285;
+}
+
+body>footer ul {
+	line-height: 1.4285;
+}
+
+body>header blockquote {
+	line-height: 1.4285;
+}
+
+body>header code {
+	line-height: 1.4285;
+}
+
+body>header dd {
+	line-height: 1.4285;
+}
+
+body>header div {
+	line-height: 1.4285;
+}
+
+body>header dl {
+	line-height: 1.4285;
+}
+
+body>header dt {
+	line-height: 1.4285;
+}
+
+body>header fieldset {
+	line-height: 1.4285;
+}
+
+body>header form {
+	line-height: 1.4285;
+}
+
+body>header h1 {
+	line-height: 1.4285;
+}
+
+body>header h2 {
+	line-height: 1.4285;
+}
+
+body>header h3 {
+	line-height: 1.4285;
+}
+
+body>header h4 {
+	line-height: 1.4285;
+}
+
+body>header h5 {
+	line-height: 1.4285;
+}
+
+body>header h6 {
+	line-height: 1.4285;
+}
+
+body>header input {
+	line-height: 1.4285;
+}
+
+body>header legend {
+	line-height: 1.4285;
+}
+
+body>header li {
+	line-height: 1.4285;
+}
+
+body>header p {
+	line-height: 1.4285;
+}
+
+body>header pre {
+	line-height: 1.4285;
+}
+
+body>header td {
+	line-height: 1.4285;
+}
+
+body>header textarea {
+	line-height: 1.4285;
+}
+
+body>header th {
+	line-height: 1.4285;
+}
+
+body>header ul {
+	line-height: 1.4285;
+}
+
+body>.container .h1 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container .h2 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container .h3 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container .h4 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container .h5 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container .h6 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h1 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h2 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h3 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h4 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h5 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h6 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer .h1 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer .h2 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer .h3 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer .h4 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer .h5 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer .h6 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer h1 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer h2 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer h3 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer h4 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer h5 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>footer h6 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header .h1 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header .h2 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header .h3 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header .h4 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header .h5 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header .h6 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header h1 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header h2 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header h3 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header h4 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header h5 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>header h6 {
+	line-height: 1.1;
+	font-weight: 500;
+}
+
+body>.container h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>.container h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>.container h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>footer h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>footer h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>footer h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>header h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>header h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>header h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+body>.container p {
+	margin: 0px 0px 10px;
+}
+
+body>footer p {
+	margin: 0px 0px 10px;
+}
+
+body>header p {
+	margin: 0px 0px 10px;
+}
+
+body>.container ol {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+body>.container ul {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+body>footer ol {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+body>footer ul {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+body>header ol {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+body>header ul {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+#similar h3 a {
+	color: rgb(0, 0, 0);
+	font-weight: 700;
+}
+
+#similar h3 a:hover {
+	color: rgb(190, 26, 33);
+}
+
+#similar .simple-box-content {
+	position: relative;
+}
+
+#similar .users {
+	padding: 0px 6px;
+}
+
+#similar .users .col-xs-4 {
+	padding: 0px;
+	text-align: center;
+	position: static;
+}
+
+#similar .users img {
+	width: 60px;
+	height: 60px;
+}
+
+#similar .users a.user {
+	border: 3px solid transparent;
+	border-image: none;
+	display: inline-block;
+}
+
+#similar .users a.user:hover {
+	border-color: rgb(204, 204, 204);
+}
+
+#similar .users li.active .user-info {
+	display: block;
+}
+
+#similar .users li.active .user {
+	border-color: rgb(204, 204, 204);
+}
+
+#similar .user-info {
+	text-align: left;
+	display: none;
+	position: absolute;
+}
+
+#similar .user-info>p>span {
+	visibility: hidden;
+}
+
+#similar .user-info .btn-link {
+	padding: 0px 1em;
+	border: 1px solid transparent;
+	border-image: none;
+	height: auto;
+	color: rgb(255, 255, 255);
+	line-height: 24px;
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	background-color: rgb(102, 102, 102);
+}
+
+#similar .user-info .btn-link .plus {
+	line-height: 18px;
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 19px;
+}
+
+#similar .user-info .btn-link:hover {
+	text-decoration: none;
+	background-color: rgb(51, 51, 51);
+}
+
+.anonymous #similar .user-info .btn-link {
+	visibility: hidden;
+}
+
+#similar h4 {
+	color: rgb(51, 51, 51);
+	padding-left: 0.5em;
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#similar p {
+	color: rgb(51, 51, 51);
+	padding-left: 0.5em;
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#similar .follow:focus {
+	text-decoration: none;
+}
+
+#similar .followed.follow {
+	background: rgb(170, 170, 170);
+	cursor: wait;
+}
+
+#similar .following.follow {
+	background: rgb(170, 170, 170);
+	cursor: wait;
+}
+
+#similar .followed.follow:focus {
+	background: rgb(170, 170, 170);
+}
+
+#similar .followed.follow:hover {
+	background: rgb(170, 170, 170);
+}
+
+#similar .following.follow:focus {
+	background: rgb(170, 170, 170);
+}
+
+#similar .following.follow:hover {
+	background: rgb(170, 170, 170);
+}
+
+#similar .followed.follow {
+	cursor: default;
+}
+
+#similar .refresh {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -1520px;
+	border: 1px solid transparent;
+	transition: 0.2s ease-in-out;
+	border-image: none;
+	width: 37px;
+	height: 37px;
+	right: 12px;
+	bottom: 12px;
+	line-height: 1.4285;
+	display: inline-block;
+	position: absolute;
+}
+
+#similar .refresh:hover {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+
+#similar .refresh:focus {
+	outline: 0px;
+}
+
+#recommend-tags {
+	border: currentColor;
+	border-image: none;
+}
+
+#recommend-tags .simple-box-content {
+	padding: 5px;
+}
+
+#recommend-tags .simple-box-content ul {
+	margin-top: -5px;
+	margin-bottom: 0px;
+}
+
+#recommend-tags .tag-list a {
+	border: 1px solid rgb(225, 225, 225);
+	border-image: none;
+	color: rgb(102, 102, 102);
+	line-height: 32px;
+	padding-left: 8px;
+	margin-top: 5px;
+	display: block;
+}
+
+#recommend-tags .tag-list a:hover {
+	background: rgb(255, 255, 255);
+	color: rgb(51, 51, 51);
+}
+
+#recommend-tags .tag-list .follow {
+	padding: 0px 8px;
+	text-align: center;
+	margin-top: 0px;
+	float: right;
+	display: block;
+	min-width: 50px;
+}
+
+.anonymous #recommend-tags .tag-list .follow {
+	cursor: default;
+}
+
+.anonymous #recommend-tags .tag-list .follow:hover {
+	background: 0px 0px;
+}
+
+#recommend-tags .link-list {
+	margin-bottom: 0px;
+}
+
+#recommend-tags .link-list a {
+	color: rgb(0, 0, 0);
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#recommend-tags .link-list a:hover {
+	text-decoration: underline;
+}
+
+#recommend-tags .more a {
+	color: rgb(153, 153, 153);
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#recommend-tags .more a:hover {
+	color: rgb(190, 26, 33);
+}
+
+html .csdn-toolbar {
+	min-width: 1000px;
+}
+
+html .csdn-toolbar .container {
+	width: 980px !important;
+}
+
+html .csdn-toolbar .icon {
+	display: block;
+}
+
+html .csdn-toolbar .ft .icon {
+	display: inline;
+}
+
+html .csdn-toolbar .info {
+	border: currentColor;
+	border-image: none;
+}
+
+html .csdn-toolbar .on .on-profile-icon .ft .pull-right {
+	line-height: 15px;
+}
+
+body {
+	background: url("../img/bg.png") rgb(248, 248, 248);
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+form .red {
+	color: red;
+}
+
+form .red::before {
+	content: "  ";
+}
+
+.container {
+	width: 1000px !important;
+}
+
+.headerPic {
+	margin: 20px -5px 0px;
+}
+
+.headerPic .pic {
+	width: 75px;
+	height: 75px;
+	float: left;
+}
+
+.headerPic .pic img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.headerPic .operate {
+	margin-left: 90px;
+}
+
+.headerPic .operate h1 {
+	color: rgb(51, 51, 51);
+	font-size: 30px;
+}
+
+#main {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+#my-nav {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+#main {
+	margin-top: 5px;
+}
+
+#my-nav {
+	margin-right: -5px;
+	margin-left: -5px;
+	border-bottom-color: rgb(225, 225, 225);
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	background-color: rgb(255, 255, 255);
+}
+
+#my-nav .container {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#my-nav .navbar-nav {
+	padding-left: 30px;
+	margin-bottom: 0px;
+}
+
+#my-nav .navbar-nav>li {
+	margin-right: 20px;
+}
+
+#my-nav .navbar-nav>li>a {
+	padding: 0px 0.5em;
+	color: rgb(114, 114, 114);
+	line-height: 50px;
+	font-size: 16px;
+}
+
+#my-nav .navbar-nav>li.active {
+	margin-bottom: -3px;
+	border-bottom-color: rgb(220, 60, 0);
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	background-color: transparent;
+}
+
+#my-nav .navbar-nav>li:focus {
+	margin-bottom: -3px;
+	border-bottom-color: rgb(220, 60, 0);
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	background-color: transparent;
+}
+
+#my-nav .navbar-nav>li>a:focus {
+	margin-bottom: -3px;
+	border-bottom-color: rgb(220, 60, 0);
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	background-color: transparent;
+}
+
+#my-nav .navbar-nav>li>a:hover {
+	margin-bottom: -3px;
+	border-bottom-color: rgb(220, 60, 0);
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	background-color: transparent;
+}
+
+#my-nav .navbar-collapse {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#my-nav .pull-right {
+	line-height: 50px;
+	padding-right: 30px;
+}
+
+#my-nav .pull-right .btn-cfg {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -1830px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+}
+
+#main>.row>* {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.content {
+	width: 720px;
+}
+
+.sides {
+	width: 280px;
+}
+
+.fixed-wrapper .in-fixed.fixed-content {
+	margin-top: -15px;
+}
+
+.btn-cancel {
+	background-color: rgb(190, 26, 33);
+}
+
+.btn-ok {
+	background-color: #1C86EE;
+}
+
+.btn-primary {
+	background-color: rgb(190, 26, 33);
+}
+
+.btn-cancel:focus {
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-cancel:hover {
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-ok:focus {
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-ok:hover {
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-primary:focus {
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-primary:hover {
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-cancel {
+	padding: 5px 16px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255) !important;
+	line-height: 17px;
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.btn-ok {
+	padding: 5px 16px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255) !important;
+	line-height: 17px;
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.btn-cancel:focus {
+	color: rgb(255, 255, 255);
+}
+
+.btn-cancel:hover {
+	color: rgb(255, 255, 255);
+}
+
+.btn-ok:focus {
+	color: rgb(255, 255, 255);
+}
+
+.btn-ok:hover {
+	color: rgb(255, 255, 255);
+}
+
+.btn-cancel {
+	background-color: rgb(153, 153, 153);
+}
+
+.btn-cancel:focus {
+	background-color: rgb(102, 102, 102);
+}
+
+.btn-cancel:hover {
+	background-color: rgb(102, 102, 102);
+}
+
+.btn-add {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -690px;
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+}
+
+.btn-choose-file {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -690px;
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+}
+
+.btn-edit {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -690px;
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+}
+
+.btn-remove {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -690px;
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+}
+
+.btn-add:hover {
+	background-position: 0px -660px;
+}
+
+.btn-choose-file:hover {
+	background-position: 0px -660px;
+}
+
+.btn-edit:hover {
+	background-position: 0px -660px;
+}
+
+.btn-remove:hover {
+	background-position: 0px -660px;
+}
+
+.btn-add {
+	background-position: 0px -120px;
+	width: 20px;
+	height: 17px;
+}
+
+.btn-add:hover {
+	background-position: 0px -90px;
+}
+
+.btn-edit {
+	background-position: 0px 0px;
+	width: 16px;
+	height: 16px;
+}
+
+.btn-edit:hover {
+	background-position: 0px -30px;
+}
+
+.btn-choose-file {
+	background-position: 15px -170px;
+	width: 121px;
+	height: 32px;
+	text-align: center;
+	color: rgb(255, 255, 255) !important;
+	line-height: 32px;
+	overflow: hidden;
+	padding-left: 15px;
+	text-decoration: none;
+	position: relative;
+	background-color: rgb(190, 26, 33);
+}
+
+.btn-choose-file:hover {
+	background-position: 15px -170px;
+	cursor: pointer;
+	background-color: rgb(165, 1, 8);
+}
+
+.btn-choose-file input {
+	left: 0px;
+	top: -2em;
+	width: 100%;
+	position: absolute;
+	cursor: pointer;
+}
+
+.simple-box {
+	border: 1px solid rgb(221, 221, 221);
+	border-image: none;
+	margin-top: 15px;
+	background-color: rgb(255, 255, 255);
+}
+
+aside.simple-box {
+	border-color: rgb(225, 225, 225);
+}
+
+.simple-box h2 {
+	margin: 0px;
+	padding: 10px 10px 10px 30px;
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	border-bottom-color: rgb(191, 191, 191);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.simple-box h3 {
+	margin: 0px;
+	padding: 10px 10px 10px 30px;
+	font-family: "΢���ź�", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	border-bottom-color: rgb(191, 191, 191);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+aside.simple-box h2 {
+	border-color: rgb(225, 225, 225);
+}
+
+aside.simple-box h3 {
+	border-color: rgb(225, 225, 225);
+}
+
+.simple-box h3 {
+	padding-left: 15px;
+	font-size: 15px;
+}
+
+aside.simple-box h3 {
+	font-size: 14px;
+}
+
+.simple-box .simple-box-content {
+	padding: 25px 30px;
+}
+
+aside.simple-box .simple-box-content {
+	padding: 15px;
+}
+
+.simple-box .simple-box-content li {
+	line-height: 24px;
+}
+
+.simple-box .simple-box-bottom {
+	padding: 10px 30px;
+}
+
+.simple-box form.row {
+	margin: 0px;
+}
+
+.readonly .simple-box form.row {
+	display: none;
+}
+
+.simple-box form.row .narrow-col {
+	padding: 0px;
+	width: 24px;
+	line-height: 28px;
+}
+
+.simple-box form.row .last {
+	margin-right: -100%;
+}
+
+.simple-box form.row .btn-add {
+	vertical-align: middle;
+}
+
+.simple-box form.row .col-xs-1 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-10 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-11 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-12 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-2 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-3 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-4 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-5 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-6 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-7 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-8 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .col-xs-9 {
+	padding: 0px 0px 0px 5px;
+}
+
+.simple-box form.row .btn {
+	border: currentColor;
+	border-image: none;
+	width: 81px;
+	height: 28px;
+	color: rgb(255, 255, 255);
+	line-height: 28px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.simple-box form.row .form-control {
+	padding: 6px;
+	border-radius: 0px;
+	height: 28px;
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.border-dashed {
+	border-style: dashed;
+}
+
+.certificated {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -1950px;
+	width: 18px;
+	height: 16px;
+	display: inline-block;
+}
+
+.certificated:hover {
+	background-position: 0px -1920px;
+}
+
+.toggle-privacy {
+	background: url("../img/icons.png?deb70fb") no-repeat 0px -1860px;
+	width: 56px;
+	height: 17px;
+	display: inline-block;
+}
+
+.readonly .toggle-privacy {
+	display: none;
+}
+
+.active.toggle-privacy {
+	background-position: 0px -1890px;
+}
+
+.popover .cancel {
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.popover .ok {
+	font-size: 12px;
+	cursor: pointer;
+}
+
+body>.container .icon {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	display: inline-block;
+}
+
+.csdn-toolbar body>.container .icon {
+	display: block;
+}
+
+body>.container .icon-down.icon {
+	background-position: 0px -210px;
+	width: 15px;
+	height: 8px;
+}
+
+body>.container .icon-up.icon {
+	background-position: 0px -210px;
+	width: 15px;
+	height: 8px;
+}
+
+body>.container .active.icon-down.icon {
+	background-position: 0px -230px;
+}
+
+body>.container .icon-down.icon:hover {
+	background-position: 0px -230px;
+}
+
+body>.container .active.icon-up.icon {
+	background-position: 0px -230px;
+}
+
+body>.container .icon-up.icon:hover {
+	background-position: 0px -230px;
+}
+
+body>.container .icon-up.icon {
+	background-position: 0px -1480px;
+}
+
+body>.container .active.icon-up.icon {
+	background-position: 0px -1500px;
+}
+
+body>.container .icon-up.icon:hover {
+	background-position: 0px -1500px;
+}
+
+body>.container .icon-triangle-down.icon {
+	background-position: 0px -1400px;
+	width: 11px;
+	height: 12px;
+}
+
+body>.container .icon-triangle-right.icon {
+	background-position: 0px -1400px;
+	width: 11px;
+	height: 12px;
+}
+
+body>.container .active.icon-triangle-down.icon {
+	background-position: 0px -1420px;
+}
+
+body>.container .icon-triangle-down.icon:hover {
+	background-position: 0px -1420px;
+}
+
+body>.container .active.icon-triangle-right.icon {
+	background-position: 0px -1420px;
+}
+
+body>.container .icon-triangle-right.icon:hover {
+	background-position: 0px -1420px;
+}
+
+body>.container .icon-triangle-down.icon {
+	background-position: 0px -1440px;
+}
+
+body>.container .active.icon-triangle-down.icon {
+	background-position: 0px -1460px;
+}
+
+body>.container .icon-triangle-down.icon:hover {
+	background-position: 0px -1460px;
+}
+
+.form-inline span.help-block {
+	display: inline;
+}
+
+.reward-icon-1 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-10 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-2 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-3 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-4 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-5 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-6 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-7 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-8 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-9 {
+	background: url("../img/icons.png?deb70fb") no-repeat;
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+}
+
+.reward-icon-1 {
+	background-position: 0px -720px;
+}
+
+.reward-icon-2 {
+	background-position: 0px -770px;
+}
+
+.reward-icon-3 {
+	background-position: 0px -820px;
+}
+
+.reward-icon-4 {
+	background-position: 0px -870px;
+}
+
+.reward-icon-5 {
+	background-position: 0px -920px;
+}
+
+.reward-icon-6 {
+	background-position: 0px -970px;
+}
+
+.reward-icon-7 {
+	background-position: 0px -1020px;
+}
+
+.reward-icon-8 {
+	background-position: 0px -1070px;
+}
+
+.reward-icon-9 {
+	background-position: 0px -1120px;
+}
+
+.reward-icon-10 {
+	background-position: 0px -1170px;
+}
+
+.ajax-loading {
+	top: 0px;
+	width: 100%;
+	height: 0px;
+	text-align: center;
+	overflow: visible;
+	font-size: 12px;
+	display: none;
+	position: fixed;
+	z-index: 2147483647;
+}
+
+.ajax-loading .margins {
+	padding: 0.5em 2em;
+	display: inline-block;
+	position: relative;
+	background-color: rgba(66, 66, 66, 0.85);
+}
+
+.ajax-loading .margins * {
+	color: rgb(255, 255, 255);
+}
+
+.ajax-loading .loading-text {
+	background: url("../img/loading.gif") no-repeat 0px;
+	line-height: 24px;
+	padding-left: 2.2em;
+}
+
+.ajax-loading .glyphicon-remove {
+	top: 0px;
+	width: 2.3em;
+	right: 0.5em;
+	line-height: 2.3em;
+	font-size: 1.2em;
+	position: absolute;
+}
+
+.ajax-loading .error-text {
+	border: currentColor;
+	border-image: none;
+	font-weight: 700;
+	display: none;
+	min-width: 30em;
+	background-color: transparent;
+}
+
+.just-in-edit {
+	height: 25px;
+	font-weight: 400;
+	border-left-color: transparent;
+	border-left-width: 1px;
+	border-left-style: solid;
+	display: inline-block;
+	position: relative;
+}
+
+.just-in-edit .btn-edit {
+	background-position: 5px 5px;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+}
+
+.just-in-edit .btn-edit:hover {
+	background-position: 5px -25px;
+}
+
+.just-in-edit form {
+	padding: 10px;
+	top: 0px;
+	right: 25px;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	min-width: 179px;
+	background-color: rgb(51, 51, 51);
+}
+
+.active.just-in-edit {
+	border-color: rgb(63, 63, 63);
+	visibility: visible !important;
+	background-color: rgb(51, 51, 51);
+}
+
+.active.just-in-edit .btn-edit {
+	background-position: 5px 5px;
+}
+
+.active.just-in-edit form {
+	display: block;
+}
+
+.just-in-edit .form-group {
+	margin-bottom: 10px;
+}
+
+.just-in-edit .form-control {
+	padding: 6px;
+	border-radius: 0px;
+	border: currentColor;
+	border-image: none;
+	height: 28px;
+	color: rgb(255, 255, 255);
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	background-color: rgb(102, 102, 102);
+}
+
+.just-in-edit :-ms-input-placeholder.form-control {
+	color: rgb(255, 255, 255);
+}
+
+.just-in-edit select.form-control {
+	font-size: 13px;
+}
+
+.just-in-edit option {
+	line-height: 1.2em;
+	font-size: 13px;
+}
+
+html .just-in-edit .btn {
+	border: 1px solid transparent;
+	border-image: none;
+	width: 76px;
+	height: auto;
+	color: rgb(255, 255, 255);
+	line-height: 1.4285;
+}
+
+.modal-dialog {
+	width: 640px;
+	margin-top: 10%;
+}
+
+.modal-dialog .modal-content {
+	border-radius: 0px;
+	border: currentColor;
+	border-image: none;
+	background-color: rgb(51, 51, 51);
+}
+
+.modal-dialog .modal-body {
+	padding: 30px;
+	color: rgb(153, 153, 153);
+}
+
+.tags .badge {
+	padding: 4px 10px;
+	color: rgb(51, 51, 51);
+	font-family: "����", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	background-color: rgb(243, 243, 243);
+}
+
+.tags .badge:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(190, 26, 33);
+}
+
+footer {
+	margin-top: 25px;
+}
+
+#pub_footerall * {
+	line-height: 24px;
+}

@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+body {
+font-family: tahoma, arial, Verdana, sans-serif;
+font-size: 12px;
+color: #666666;
+}
+
+a {
+text-decoration: none;
+cursor: pointer;
+/* color: #666666; */
+
+}
+img {
+	border:none;
+}
+.clearfix {
+clear: both;
+zoom: 1;
+}
+
+li {
+ white-space:nowrap;
+ text-overflow:ellipsis; 
+ -o-text-overflow:ellipsis; 
+}
+
+ul, li, ol {
+	
+list-style: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, lengend, button, input, textarea, th, td, table {
+margin: 0;
+padding: 0;
+}
+
+.fr {
+float: right;
+}
+
+.fl {
+float: left;
+}

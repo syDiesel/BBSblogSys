@@ -1,0 +1,60 @@
+.main{
+	
+	width:900px;
+	height:540px;
+	background-color: white;
+	text-align;
+}
+
+#listAlbum{
+	margin:10px;
+	margin-left:250px;
+}
+#listAlbum_info{
+	font:bold;
+	
+}
+#listAlbum tr  .td1{
+    width:100px;
+    height:40px;
+    margin:15px 5px;
+    font-size: 17px;
+    
+}
+#listAlbum tr .td2{
+    width:190px;
+    height:40px;
+    margin:10px 5px;
+    border-radius:6px;
+    border:1px #bbc solid;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.td3{
+	width:300px;
+	margin:15px 0px;
+	font-size: 16px;
+}
+
+.td4{
+	margin:15px 6px;
+	
+}
+
+.butt_ok{
+	
+	width:60px;
+	height:30px;
+	font-size:16px;
+    color:olive;
+}
+
+.butt_reset{
+	
+	width:60px;
+	height:30px;
+	font-size:16px;
+	color:olive;
+}
+

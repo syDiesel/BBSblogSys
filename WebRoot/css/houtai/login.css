@@ -1,0 +1,68 @@
+/* swh
+登录  css */
+
+#loginTitle{
+	
+	margin-top: 40px;
+}
+#login_form{
+	margin-left:100px;
+}
+#login_fomr #name1{
+	
+}
+
+#login_form tr  .td1{
+ 	width:100px;height:30px;margin:15px 5px;font-size: 17px;
+	text-align:right;
+}
+#login_form tr .td2{
+  	width:210px;height:40px;margin:10px 5px;border-radius:6px;
+  	border:1px #bbc solid;
+  	font-size: 16px;padding-left: 10px;
+}
+#login_form tr .td3{
+   	width:210px;height:30px;
+   	padding-left:15px;
+   	color: #0aa;font-size: 14px;		
+}
+#login_form tr .td3 a{
+   	text-decoration: underline;		
+}
+#login_form tr .td3 a:HOVER{
+   	color: blue;
+}
+#login_form tr .td2_info{
+	font-size: 14px;padding-left: 8px;
+}
+#login_form tr td #mycode{
+	width:80px;
+}
+#login_form tr td #code{
+	width:120px;
+    height:37px;    			
+	border-radius:2px;
+}
+
+#toLogin{  
+	margin-top:30px;  
+	margin-left:-75px;			
+	font-size:15px;
+	width:80px;
+	height:35px;
+	cursor: pointer;				
+}
+#toRegister{    
+	vertical-align:bottom; 			
+	margin-left:10px;	
+	font-size:12px;
+	width:80px;
+	height:35px;
+	text-decoration: underline;	
+}
+div #span a:HOVER {
+	color: blue;
+}
+.btn{
+	margin-left:100px;
+}

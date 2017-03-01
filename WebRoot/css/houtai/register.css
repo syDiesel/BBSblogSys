@@ -1,0 +1,71 @@
+/* swh
+注册  css */
+#regTitle {
+	margin-top: 40px;
+}
+
+#register_form {
+	
+}
+
+#register_form tr  .td1 {
+	width: 200px;
+	height: 30px;
+	margin: 15px 5px;
+	font-size: 17px;
+	text-align: right;
+}
+
+#register_form tr .td2 {
+	width: 210px;
+	height: 40px;
+	margin: 5px 5px;
+	border-radius: 6px;
+	border: 1px #bbc solid;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+#register_form tr .td3 {
+	width: 210px;
+	height: 30px;
+	float: left;
+	color: #0aa;
+	font-size: 14px;
+}
+
+#register_form tr .td2_info {
+	font-size: 14px;
+	padding-left: 8px;
+}
+
+#register_form tr td #mycode {
+	width: 80px;
+}
+
+#register_form tr td #code {
+	width: 120px;
+	height: 37px;
+	border-radius: 2px;
+}
+
+#toRegister {
+	margin-top: 30px;
+	margin-left: -75px;
+	font-size: 15px;
+	height: 35px;
+	cursor: pointer;
+}
+
+#toLogin {
+	vertical-align: bottom;
+	margin-left: 10px;
+	font-size: 12px;
+	width: 80px;
+	height: 35px;
+	text-decoration: underline;
+}
+
+div #span a:HOVER {
+	color: blue;
+}

@@ -1,0 +1,350 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+    <title>register</title>
+    
+    <link type="text/css" href="<%=basePath%>css/index_default.css" rel="stylesheet" />
+	<link href="<%=basePath%>css/headfoot.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=basePath%>js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/houtai/register.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/login_all.js"></script>
+   <link type="text/css" rel="stylesheet" href="<%=basePath%>css/personInfo/basic.css">
+   <link type="text/css" rel="stylesheet" href="<%=basePath%>css/NewUser/register.css">
+   <link type="text/css" rel="stylesheet" href="<%=basePath%>css/NewUser/register-user-info.css">
+   <link href="<%=basePath%>css/qiantai/login.css" rel="stylesheet" type="text/css" />
+   
+   <link type="image/x-icon" href="<%=basePath%>img/bitbug_favicon.ico"
+	rel="shortcut icon" />
+
+   <link href="<%=basePath%>css/Index/index.css" rel="stylesheet"
+	type="text/css" />
+	
+	<script type="text/javascript">
+
+  		function reloadcode(){
+  			
+                    var verify=document.getElementById('code');
+              
+                verify.setAttribute('src','<%=basePath%>web/user/makeCertPic.jsp?id='+new Date().getTime());
+        }
+	</script>
+   <!--  <script>
+
+       var reMarks ={"print1":"用户名称不能为空！",
+                      "print2":"请输入合法的用户名称！",
+                      "print3":"用户名长度不能少于6位！",
+                      "print4":"用户名长度不能超过20位！",
+                      "print5":"该用户名已经被注册！",
+                      "print6":"昵称不合法！",
+                      "print7":"此昵称已被占用！",
+                      "print8":"密码不能为空！",
+                      "print9":"密码长度不能少于6位！",
+                      "print10":"密码不一致！",
+                      "print11":"登录密码不合法！>",
+                      "print12":"邮箱地址不能为空！",
+                      "print13":"邮箱地址格式不合法！",
+                      "print14":"该邮箱地址已经被占用！",
+                      "print15":"连接错误",
+                      "print16":"确认密码不能为空！" };
+
+    </script> -->
+
+  </head>
+  
+  <body style="text-align:center;font-family: arial;">
+  <input type="hidden" id="basePath" value="<%=basePath%>" />
+<!---------------------------login_begin  ------------------------->
+	<div id="main_login" class="main_login"></div>
+	<div class="login_div" id="login_div">
+		<div class="login_head">
+			<h1>Login</h1>
+			<span class="login_head_right"> <span
+				class="login_head_right_none">No Account</span>&nbsp;&nbsp;&nbsp;<a
+				href="<%=basePath%>isAgree.do">Register</a> </span>
+		</div>
+		<div class="login_form">
+			<form action="<%=basePath%>login.do" method="post">
+				<input type="hidden" value="" id="login_href" name="login_href">
+				<table>
+					<tr>
+						<td><input type="text" name="userName" placeholder="User Name"
+							class="login_td"></td>
+					</tr>
+					<tr>
+						<td><input type="password" name="password" placeholder="Cipher"
+							class="login_td"></td>
+					</tr>
+					<tr>
+						<td><input class="login_but" accesskey="l" value="Login"
+							tabindex="5" type="submit"> <!-- <span class="login_span"><input type="checkbox" name="">保持登录</span> -->
+							<span class="login_span"><a
+								href="<%=basePath%>ToGetBackPwd.do">Forget Cipher？</a>
+						</span></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<!-- <div class="login_other">
+			<p>login other way</p>
+			<div style="width:380px;height:80px;padding-top:20px;">
+				<button class="login_sina"></button>
+				<button class="login_qq"></button>
+			</div>
+		</div> -->
+	</div>
+	<!---------------------------login_end  ------------------------->
+	<!--head begin-->
+	<div ID="head" class="head">
+		<!--top-->
+		<div id="top" class="top">
+			<div class="top-btn-left">
+				<a href="javascript:AddFavorite(window.location,document.title)">Save Us</a>
+				<!-- <a href="javascript:void(0)">联系我们</a> -->
+			</div>
+
+			<div class="top-btn-right">
+
+				<!-- <div class="language">
+					<a href="javascript:changeLocale('locale=zh_CN')">简</a> 
+					<a href="javascript:changeLocale('locale=zh_TW')">繁</a>
+					<a href="javascript:changeLocale('locale=en_US')">EN</a>
+				</div>  -->
+				<c:if test="${!empty userInfo }">
+					<div class="user-btn">
+						<ul>
+							<span class="ban">&nbsp;</span>
+							<li id="personPic"><a><img
+									src="<%=basePath%>${userInfo.headImg}" width="20" height="20" />
+							</a>
+								<div class="personInfo" id="personInfo">
+									<div class="personInfoPart1">
+										<a href="<%=basePath%>web/Blog/${userInfo.nickName}"> <img
+											src="<%=basePath%>${userInfo.headImg}" width="90" height="90" />
+										</a>
+										<div class="personInfoDetail">
+											<p>
+											<h3>${userInfo.nickName}</h3>
+											</p>
+											<p>
+
+												<span>Level：</span>
+
+												<c:forEach begin="1" end="${userInfo.userLevel}" step="1">
+													<img src="<%=basePath%>images/Forums/star.png" width="10px"
+														height="10px" />
+												</c:forEach>
+												<c:forEach begin="${userInfo.userLevel+1}" end="7" step="1">
+													<img src="<%=basePath%>images/Forums/0star.png"
+														width="10px" height="10px" />
+												</c:forEach>
+
+											</p>
+											<br /> <a class="pConfig"
+												href="<%=basePath%>u/detail/${userInfo.id}.html"><span
+												class="icon-pConfig"></span>Edit</a>
+										</div>
+									</div>
+									<div class="personInfoPart2">
+										<div class="config">
+											<a href="<%=basePath%>u/setting/password"><span
+												class="icon-cog"></span>Setting</a>
+
+										</div>
+										<div class="logout">
+											<a href="<%=basePath%>logout.do" title="Exit"><span
+												class="icon-logout"></span> </a>
+										</div>
+
+									</div>
+
+								</div></li>
+
+
+							<span class="ban">&nbsp;</span>
+							<li style="height: 30px;"><div class="config">
+									<a href="<%=basePath%>/web/PrivateMsg/RecBox"><span
+										class="icon-msg"></span><em>${newMsgCount }</em> </a>
+
+								</div></li>
+							<span class="ban">&nbsp;</span>
+						</ul>
+
+
+
+					</div>
+				</c:if>
+
+
+
+
+				<div class="charge">
+					<c:if test="${empty userInfo }">
+						<span class="ban">&nbsp;</span>
+						<a href="javascript:void(0)" id="login_all">Log in</a>
+						<span class="ban">&nbsp;</span>
+						<a href="<%=basePath%>isAgree.do">Register</a>
+					</c:if>
+					<span class="ban">&nbsp;</span> <a
+						href="<%=basePath%>ToGetBackPwd.do">Find Cipher</a> <span class="ban">&nbsp;</span>
+					<a href="javascript:void(0)">Voucher Center</a> <span class="ban">&nbsp;</span>
+				</div>
+			</div>
+			<!---top-btn-right  end-->
+		</div>
+		<!--top end-->
+		<!--logo-->
+		<div class="logo">
+			<div class="yszs">
+				<a href="#"><img src="<%=basePath%>img/Index-logo.png" /> </a>
+			</div>
+			<div class="searchBanner">
+				<FORM name="search_form_1" id="search_form_1"
+					action="<%=basePath%>search.do">
+					<DIV class="search-text-con2">
+						<INPUT name="search" class="search-text2" id="q1" type="text"
+							value="" autocomplete="off" path="q" placeholder="  input keyword">
+						<input type="hidden" id="txtSear" value="0" name="searchMethod" />
+					</DIV>
+					<DIV class="search-btn-con2">
+						<INPUT class="search-btn2" type="submit" value="Search">
+					</DIV>
+				</FORM>
+			</div>
+			<div class="app">
+				<a href="javascript:void(0)"></a>
+				<h3 style="font-size:14px;">App Download</h3>
+			</div>
+
+		</div>
+		<!--logo end-->
+		<!--nav-->
+		<div class="nav">
+			<ul>
+				<li><a href="<%=basePath%>toIndexHome">Frontpage</a></li>
+				<li><a href="<%=basePath%>web/Blog/index.html">Blog</a></li>
+				<li><a href="<%=basePath%>listPostByBoard">Forum</a></li>
+				<li><a href="<%=basePath%>web/QandA/Home.html">Q & A</a></li>
+				<li><c:if test="${userInfo.role.id!=1 }">
+						<a href="<%=basePath%>contact.do">Service Center</a>
+						</c:if>
+						<c:if test="${userInfo.role.id==1 }">
+						<a href="<%=basePath%>toManagement">Supervision</a>
+						</c:if></li>
+				<li><a href="<%=basePath%>faq.do">Regulation</a></li>
+			</ul>
+		</div>
+		<!--nav end-->
+		<!--pic-->
+		<div class="Logo_pic"></div>
+		<!--pic end-->
+
+
+
+	</div>
+	<!--head end-->
+<!--main start-->
+<div id="content" style="background:#fff;margin-bottom:30px;margin-top:20px;display:inline-block;">
+  <div class="mod-setting clearfix" style="margin-top:0px;">
+    
+    <div class="main_title" style="text-align:left;">
+        register
+    </div>
+    
+    <div class="user-info">
+    
+     <form action="register.do" method="post" id="regForm">   
+         <ul>
+                <li><span style="line-height:36px;">user name</span>
+                  <input type="hidden" name="headImg" value="images/home/noHead.jpg" />
+                  <input name="userName" id="username" tabindex="1" class="user-name" type="text"
+                   placeholder="alphbet or no.s" style="height:18px\9;">
+                  <span class="username_info1" tempUsername="alphabet or numbers">
+                  </span>
+                </li>
+                <li id="ERRORinformation">
+                <span>&nbsp;</span>
+                <span class="username_info2"></span>
+                </li>
+                <li><span style="line-height:36px;">nickname</span>
+                  <input name="nickName" id="nickName" tabindex="2" class="email" type="text"
+                  placeholder="4-10 digits(alphbet or numbers)" style="height:18px\9;">
+                  <span class="nickName_info1" tempNickName="input nickname">
+                  </span>
+                </li>
+                 <li id="ERRORinformation">
+                <span>&nbsp;</span>
+                <span class="nickName_info2"></span>
+                </li>
+                <li><span style="line-height:36px;">Login email</span>
+                  <input name="e_mail" id="email" tabindex="2" class="email" type="text"
+                   placeholder="input email" style="height:18px\9;">
+                   <span class="email_info1" ></span>
+                </li>
+                 <li id="ERRORinformation">
+                <span>&nbsp;</span>
+                <span class="email_info2"></span>
+                </li>
+                <li><span style="line-height:36px;">cipher</span>
+                  <input name="Password" id="password" tabindex="3" class="password main-password"
+                   value="" type="password" placeholder="more than 6 digits"style="height:18px\9;">
+                  <span class="password_info1" tempPassword="more than 6 digits">
+                  </span>
+                </li>
+                 <li id="ERRORinformation">
+                <span>&nbsp;</span>
+                <span class="password_info2"></span>
+                </li>
+                <li><span style="line-height:36px;">Confirm password</span>
+                  <input tabindex="4" class="password password-agin" name="Password1" id="password1" 
+                   type="password" placeholder="input cipher again" style="height:18px\9;">
+                  <span class="password1_info1" tempPassword="input cipher again";>
+                  </span>
+                </li>
+                 <li id="ERRORinformation">
+                <span>&nbsp;</span>
+                <span class="password1_info2"></span>
+                </li>
+                <li><span style="line-height:36px;">verification </span>
+                    <input name="mycode" id="mycode" maxlength="4" class="code" type="text"
+                    placeholder="input verification " style="height:18px\9;">
+                    <img src="<%=basePath%>web/user/makeCertPic.jsp" id="code" class="change-code"
+                     onclick="reloadcode()" style="cursor:pointer;">
+                      <span class="code_info1" ></span>
+                </li>
+
+              </ul>
+    </form>
+    
+    <input class="next-step" value="register" tabindex="7" type="button" id="toRegister">
+    
+    
+    </div>
+
+  </div>
+</div>
+
+<!--main_body end-->
+
+<!--main end-->
+	  
+<!--footer-->
+
+	<div class="footer">
+		<h3>Copyright © 2014 JIE & C DEV(HK)CO L.&nbsp;&nbsp;All Rights Reserved.</h3>
+	</div>
+	<!--footer end-->
+     
+</body>
+  </body>
+</html>

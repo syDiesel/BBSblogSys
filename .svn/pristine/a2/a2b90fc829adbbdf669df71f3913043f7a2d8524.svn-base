@@ -1,0 +1,141 @@
+@charset "GBK";
+.mustInput{ font-weight:bold ; color:red ; font-size:14px}
+
+/**分页**/
+#page {font-size:12px }
+#page a {color:darkblue}
+#page a:hover{color:#FF6600}
+
+
+/**用户评论 CSS开始 */
+#comment_ {  font-size:12px ;  font-family:Tahoma ; border-left:solid 2px #e0e0e0 ; padding-left:5px}
+#comment_ .btn{line-height:18px ; border:solid 1px #606060}
+#comment_  table td { padding:4px; font-size:12px}
+#comment_  input{   line-height:18px ; padding:2px 2px 2px 2px ; font-size:12px ;border:solid 1px #7F9DB9;}
+#comment_  textarea{  font-size:12px; padding:2px;  line-height:18px ;font-family:Tahoma ;font-size:12px ;border:solid 1px #7F9DB9;}
+#comment_  .checkbox{ border:none; }
+#comment_  .title{ background-color:#f0f0f0 ; font-weight:bold ;line-height:20px ; font-size:14px}
+
+#comment_ ul{margin:5px; padding:0px}
+#comment_ li{list-style-position:inside ; line-height:20px ; color:#505050}
+/**用户评论 CSS结束 */
+
+
+/**留言板 CSS开始*/
+#board_ {  float:left ; font-family:Tahoma ; border-left:solid 2px #e0e0e0 ; padding-left:5px}
+#board_ table td { padding:4px; font-size:12px}
+#board_  input{ height:22px; line-height:22px ; padding:2px 2px 2px 2px ; font-size:12px ;border:solid 1px #7F9DB9;}
+#board_  textarea{  font-size:12px; padding:2px;  line-height:18px ;font-family:Tahoma ;font-size:12px ;border:solid 1px #7F9DB9;}
+#board_ .btn{ line-height:18px ; border:solid 1px #606060}
+#board_ .desc{color:red}
+#board_ .user_legend{margin:0 0 0 12px;padding:0 5px;font-weight:bold; color:blue}
+#board_ .user_fieldset{text-align:center; width:90%;font-size:12px; margin:0px 0px 0px 5px}
+#board_  .title{ background-color:#f0f0f0 ; font-weight:bold ;line-height:20px ; font-size:14px}
+#board_ ul{margin:5px; padding:0px}
+#board_ li{list-style-position:inside ; line-height:20px ; color:#505050}
+
+
+ /* 短虚线 */
+.dot_line {  border-bottom:dotted 1px #c0c0c0; }
+.chgButton{line-height:22px; height:22px ;  padding:0px}
+
+/**用户登录和注册*/
+#userLogin_ { font-family:Tahoma;clear:both}
+#userLogin_ Legend{margin:0 0 0 12px;padding:0 5px;font-weight:bold; color:blue}
+#userLogin_ fieldset{text-align:center; width:75%;font-size:12px; margin:0px 0px 0px 5px}
+#userLogin_  input{ height:24px; line-height:24px ; padding:0px 2px 2px 2px ; font-size:12px ;border:solid 1px #7F9DB9;}
+#userLogin_  table td{ padding:2px; font-size:12px;}
+#userLogin_ a{color:#505050; font-weight:bold;text-decoration:none}
+#userLogin_ a:hover{color:#ff6600}
+
+#userLogin_ .user_title{ width:20%;	font-size:12px;line-height:120%;	text-align:right; border-bottom:dashed 1px #d0d0d0 ;}
+#userLogin_ .user_value{	width:40%;font-size:12px;line-height:120%;	  border-bottom:dashed 1px #d0d0d0}
+#userLogin_ .user_value select{font-size:12px;line-height:120%}
+#userLogin_ .user_desc{	color:#666;font-size:12px;line-height:120%;  border-bottom:dashed 1px #d0d0d0}
+#userLogin_ .user_star{color:red; margin:0 5px;}
+#userLogin_ .user_error_info{margin:0 5px;color:red;font-size:12px;line-height:120%;}
+#userLogin_  textarea{  font-size:12px; padding:5px;  line-height:18px ;font-family:Tahoma ;border:solid 1px #7F9DB9;color:#606060}
+
+#checkNumPanel_ { font-family:Tahoma;clear:both;}
+#checkNumPanel_ .checkNum_fieldset{text-align:center; width:90%;font-size:12px; margin:0px 0px 0px 5px}
+#checkNumPanel_ .checkNum_legend{margin:0 0 0 12px;padding:0 5px;font-weight:bold; color:blue;}
+#checkNumPanel_ table { padding:2px; font-size:12px;}
+#checkNumPanel_ .tipTitle {  }
+#checkNumPanel_ .label{ }
+#checkNumPanel_ .value{ }
+#checkNumPanel_ input{ height:24px; line-height:24px ; padding:0px 2px 2px 2px ; font-size:12px ;border:solid 1px #7F9DB9;}
+
+/**投票箱和投票结果*/
+.votebox_ {font-family:Tahoma;clear:both; }
+.votebox_ table{width:80%; border:5px; padding:2px; font-size:12px;}
+.votebox_ .title{ }
+.votebox_ .desc{ }
+.votebox_ .item{ }
+.votebox_ .action{ }
+.votebox_ .action input{ height:24px; line-height:24px ; padding:0px 2px 2px 2px ; font-size:12px ;border:solid 1px #7F9DB9;}
+
+.voteResultWrap {}
+#voteResult_ {font-family:Tahoma;clear:both; width:90% ; }
+#voteResult_ table{ border:5px; padding:2px; font-size:12px; background-color:#d0d0d0}
+#voteResult_ td{background-color:#ffffff; line-height:200% ; padding-left:5px ; padding-right:5px}
+#voteResult_ .title{ font-weight:bold ; font-size:13px }
+#voteResult_ .stat{ }
+#voteResult_ .colTitle{ }
+#voteResult_ .colValue{ }
+#voteResult_ .totalNum{ font-weight:bold ; color:red}
+#voteResult_ .gridTitle{text-align:center; font-weight:bold ; background-color:#f0f0f0 }
+
+
+
+/**错误信息 CSS开始 */
+#errorTitle { 	text-align: center;	font-size: 20px;	font-weight: bold;	margin-bottom: 30px;}
+#errorBody {text-align: center;}
+#errorMessage { background-color: #EBEFF3;	width: 800px;	border: solid 1px #c0c0c0;	margin: 0 , auto;	line-height:30px;	font-size:14px;	font-family:Tahoma;}
+#errorStackTitle {	background-color: #EBEFF3; 	width: 800px;	border: solid 1px #c0c0c0;	line-height:30px;	font-size:12px;	font-family:Tahoma;	width: 800px;	margin-left: auto;	margin-right: auto;	font-weight: bold;}
+#errorTemplateCode { 	text-align: left;	background-color: #EBEFF3;	width: 800px;	border-left: solid 1px #c0c0c0 ; border-right: solid 1px #c0c0c0; border-bottom:solid 1px #c0c0c0;	margin-left: auto;	margin-right: auto;	width: 800px;	height: 200px;	overflow: auto; font-family:Tahoma;}
+#errorTemplateCode  pre{ font-family:Tahoma;line-height:18px ; padding:5px}
+#errorStack {margin-top: 20px; }
+#errorStackInfo { 	text-align: left;	margin-left: auto;	margin-right: auto;	width: 800px;	height:400px;	overflow: auto;	border-left: solid 1px #c0c0c0 ; border-right: solid 1px #c0c0c0; border-bottom:solid 1px #c0c0c0;		background-color:#F7FBFF;	line-height:22px;	font-size:12px;	font-family:Tahoma;	padding:5px;}
+
+/** 搜索*/
+#search_ table td{font-size:12px}
+#search_ .inputBox{ height:18px; line-height:18px ; padding:0px 2px 2px 2px ; font-size:12px ;border:solid 1px #7F9DB9;}
+#search_ .inputTitle{font-size:12px ; line-height:20px}
+#search_ .search_fieldset{text-align:center; width:65%;font-size:12px;}
+#search_ .search_legend{margin:0 0 0 12px;padding:0 5px;font-weight:bold;}
+#search_ .btn{ line-height:18px ; border:solid 1px #606060}
+#search_ select{ height:18px; line-height:18px ;font-size:12px}
+
+
+/**验证码图片*/
+#auth_img { border:solid 1px #909090;}
+
+/**内容标题样式，必须保证和代码表中相关信息一致*/
+.cn_title_style1{color:red;}
+.cn_title_style2{color:red; font-weight:bold;}
+.cn_title_style3{color:#00ff00;}
+.cn_title_style4{color:#00ff00; font-weight:bold;}
+.cn_title_style5{color:#0000ff;}
+.cn_title_style6{color:#0000ff; font-weight:bold;}
+.cn_title_style7{color:#ffff00;}/** 黄 **/
+.cn_title_style8{color:#ffff00; font-weight:bold;}
+.cn_title_style9{color:#ff00ff;}/** 洋红 **/
+.cn_title_style10{color:#ff00ff; font-weight:bold;}
+.cn_title_style11{color:#008000;}/** 森林绿 */
+.cn_title_style12{color:#008000; font-weight:bold;}
+.cn_title_style13{color:#87ceeb;}/**天蓝 */
+.cn_title_style14{color:#87ceeb; font-weight:bold;}
+.cn_title_style15{color:#ffa500;}/** 橘黄 */
+.cn_title_style16{color:#ffa500; font-weight:bold;}
+.cn_title_style17{color:#800000;}/** 栗色 */
+.cn_title_style18{color:#800000; font-weight:bold;}
+.cn_title_style19{color:black;}
+.cn_title_style20{color:black; font-weight:bold;}
+.cn_title_style21{font-weight:bold;}/** 纯粗体 */
+.cn_title_style22{font-style:italic;}/** 纯斜体 */
+
+#changeLocale {border:1px solid #c0c0c0; width:40px;margin:0px;padding:0px; font-size:12px; font-family:Tahoma;}
+#localeSelect {list-style-type: none;width:200px;max-height:400px;overflow:auto;background-color:#fff;border:1px solid #c0c0c0;display:none;}
+#localeSelect li {background:#ffffff;}
+#localeSelect li a {display:block;line-height:20px;height:20px;color:#000000;font-size:13px;text-indent:10px;}
+#localeSelect li a:hover {background-color:#c0c0c0;}

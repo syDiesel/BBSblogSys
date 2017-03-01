@@ -1,0 +1,152 @@
+@CHARSET "UTF-8";
+.main_login{
+	display: none;
+}
+.login_div{
+	display: none;
+	width:380px;
+	height:430px;
+
+	background-color:white;
+	float:left;
+	margin-top:30px;
+	margin-left:675px;
+	opacity:1;
+	z-index: 1550;
+}
+.login_div h1{
+	font-size: 25px;
+	float: left;
+	margin-left:40px;
+}
+.login_div .login_head{
+	width:380px;
+	height:30px;
+
+	margin-top:50px;
+}
+.login_head_right{
+	display: inline-block;
+	margin-top:10px;
+	float:left;
+	margin-left:50px;
+}
+.login_head_right_none{
+	font-size: 15px;
+	margin-left:10px;
+}
+.login_head_right a{
+	font-size: 15px;
+	color: green;
+	float:right;
+}
+
+.login_form{
+	float:left;
+	margin-left:40px;
+	margin-top:40px;
+}
+.login_form tr{
+	height:45px;
+}
+.login_td{
+  	border:1px #bbc solid;
+  	background-color:white;
+	height:35px;
+	width:295px;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+}
+.login_but{
+	background: none repeat scroll 0% 0% #D6D129;
+    line-height: 35px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    clear: both;
+    width: 110px;
+    border: medium none;
+    margin:20px auto;
+    /* margin-left:-90px\9; */
+}
+.login_span{
+	font-size: 12px;
+	margin-left:30px;
+}
+
+.login_other{
+	width:380px;
+	height:120px;
+	margin-top:220px;
+}
+.login_other p{
+	font-size: 12px;
+	float:left;
+	margin-left:40px;
+	color: rgb(153, 153, 153);
+	overflow: hidden;
+}
+.login_other_{
+	width:380px;
+	height:80px;
+	float:left;
+	
+	
+}
+.login_other_ p{
+	font-size: 12px;
+	float:left;
+	color: rgb(153, 153, 153);
+	overflow: hidden;
+
+}
+.login_sina{
+    background:url(../../images/sina.jpg);
+    height: 40px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    width: 150px;
+    border: medium none;
+    margin:20px auto;
+    float:left;
+    margin-left:40px;
+}
+.login_qq{
+	background: url(../../images/qq.png);
+	height: 40px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    width: 150px;
+    border: medium none;
+    margin:20px auto;
+    float:left;
+    margin-left:10px;
+}
+.login_sina_{
+    background:url(../../images/sina.jpg);
+    height: 35px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    width: 150px;
+    border: medium none;
+    margin:20px auto;
+    float:left;
+}
+.login_qq_{
+	background: url(../../images/qq.png);
+	height: 35px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    width: 150px;
+    border: medium none;
+    margin:20px auto;
+    float:left;
+    margin-left:60px;
+}
+

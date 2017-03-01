@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+
+.submitButton{
+	background: #1C86EE;
+	border: none;
+	border-radius: 0;
+	/* height: 28px; */
+	line-height: 16px;
+	color: #FFF;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	text-align: center;
+	cursor:pointer;
+	margin-right:10px;
+	border-radius:5px;
+}
+
+.submitButton1{
+	font-family: "Microsoft YaHei";
+	background: #1C86EE;
+	border: none;
+	border-radius: 0;
+	/* height: 28px; */
+	line-height: 14px;
+	color: #FFF;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 12px;
+	padding-top: 3px;
+	text-align: center;
+	cursor:pointer;
+}
+
+#submitButton{
+	background: #1C86EE;
+	border: none;
+	border-radius: 0;
+	/* height: 28px; */
+	line-height: 16px;
+	color: #FFF;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	text-align: center;
+	cursor:pointer;
+	margin-right:270px;
+	margin-top:20px;
+	float:right;
+	border-radius:5px;
+	
+}
+.submitButton:hover{
+	color:#fff;
+}
+#submitButton:hover{
+	color:#fff;
+}
+.resetButton {
+	background: #FF3030;
+	border: none;
+	border-radius: 0;
+	height: 28px;
+	line-height: 16px;
+	color: #FFF;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	text-align: center;
+	margin:10px;
+	cursor:pointer;
+	margin-right:10px;
+}
+.resetButton:hover{
+	color:#fff;
+}
+.backButton {
+	background: #66CD00;
+	border: none;
+	border-radius: 0;
+	height: 28px;
+	line-height: 16px;
+	color: #FFF;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	text-align: center;
+	//margin:10px;
+	cursor:pointer;
+	margin-right:10px;
+}
+
+.backButton:hover{
+	color:#fff;
+}
+.submitButton_cash{
+	background: #1C86EE;
+	border: none;
+	border-radius: 0;
+	/* height: 28px; */
+	color: #FFF;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	text-align: center;
+	cursor:pointer;
+	margin-top:0px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+.submitButton_cash2{
+	background: #1C86EE;
+	border: none;
+	border-radius: 0;
+	height: 23px;
+	color: #FFF;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	text-align: center;
+	cursor:pointer;
+	margin-top:0px;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+}

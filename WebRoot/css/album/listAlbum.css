@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+.album_result{
+    margin-top:10px;
+	margin-left:20px;
+	text-align:left;
+}
+a:hover {
+	color:#fff; 
+}
+
+.album_list{	
+	display:inline-block;
+	margin:0px 10px;
+	text-align: center;
+	float:right\9;
+	margin-right:90px\9;
+	width:114px\9;
+	height:92px\9;
+}
+
+.album_list img{
+	margin:6px -13px;
+	margin-left:12px\9;
+}
+.zzzm_delete{
+	margin-left:19px;
+	float:right;
+	margin-top:15px;
+	margin-right:-10px\9;
+	margin-bottom:50px\9;
+}
+.albumName{
+	margin-left:19px;
+	float:right;
+	margin-top:15px;
+	padding-right:-50px\9;
+	width:75px;
+	height:15px;
+	overflow:hidden;
+	text-align: left;
+}
+.delete_album{
+	clear:both;
+	margin-right:50px;
+	margin-top:-50px;
+	float:right;
+	margin-right:-20px\9;
+	margin-bottom:65px\9;
+}
+.delete_album:hover{
+	color:orange;
+}
+.fenye{
+	margin-top:20px;
+	font-size:10px;
+	padding-bottom:20px;
+	margin-left:4px;
+	margin-left:15px\9;
+}
+.fenye a:HOVER {
+	color:orange;
+}

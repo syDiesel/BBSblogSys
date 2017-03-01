@@ -1,0 +1,60 @@
+.csdn-pagination {
+	margin: 20px auto; font-size: 12px; display: table;
+}
+.csdn-pagination * {
+	vertical-align: middle;
+}
+.csdn-pagination .btn {
+	background: rgb(255, 255, 255); margin: 0px -1px; padding: 3px 5px; border: 1px solid rgb(204, 204, 204); border-image: none; height: 22px; line-height: 15px; min-width: 22px;
+}
+.csdn-pagination .text {
+	color: rgb(153, 153, 153);
+}
+.csdn-pagination .page-set {
+	margin-right: 30px;
+}
+.csdn-pagination .page-set .btn .caret {
+	margin-left: 20px;
+}
+.csdn-pagination .page-go {
+	margin-left: 20px;
+}
+.csdn-pagination input {
+	width: 30px; height: 22px;
+}
+.csdn-pagination .btn-go {
+	background-color: rgb(238, 238, 238);
+}
+.csdn-pagination .btn:hover {
+	border-color: rgb(204, 0, 0); color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);
+}
+.csdn-pagination .active {
+	border-color: rgb(204, 0, 0); color: rgb(255, 255, 255); cursor: default; background-color: rgb(204, 0, 0);
+}
+.csdn-pagination .active:hover {
+	border-color: rgb(204, 0, 0); color: rgb(255, 255, 255); cursor: default; background-color: rgb(204, 0, 0);
+}
+.hide-text.csdn-pagination .text {
+	display: none;
+}
+.hide-set.csdn-pagination .page-set {
+	display: none;
+}
+.hide-nav.csdn-pagination .page-nav {
+	display: none;
+}
+.hide-go.csdn-pagination .page-go {
+	display: none;
+}
+.csdn-pagination .page-nav .btn-prev {
+	width: 20px; text-indent: -30px; overflow: hidden; display: inline-block; background-image: url("../img/bg_icons.png");
+}
+.csdn-pagination .page-nav .btn-next {
+	width: 20px; text-indent: -30px; overflow: hidden; display: inline-block; background-image: url("../img/bg_icons.png");
+}
+.csdn-pagination .page-nav .btn-prev {
+	background-position: -182px -196px;
+}
+.csdn-pagination .page-nav .btn-next {
+	background-position: -199px -196px;
+}

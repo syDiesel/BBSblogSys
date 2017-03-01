@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="BBS">
+		<class>com.bbsBlog.entity.Answer</class>
+		<class>com.bbsBlog.entity.AttachDownload</class>
+		<class>com.bbsBlog.entity.AttachStatus</class>
+		<class>com.bbsBlog.entity.Attachment</class>
+		<class>com.bbsBlog.entity.Audit</class>
+		<class>com.bbsBlog.entity.Blog</class>
+		<class>com.bbsBlog.entity.BlogHI</class>
+		<class>com.bbsBlog.entity.BlogLabel</class>
+		<class>com.bbsBlog.entity.BlogLog</class>
+		<class>com.bbsBlog.entity.BlogStatus</class>
+		<class>com.bbsBlog.entity.Board</class>
+		<class>com.bbsBlog.entity.Cash</class>
+		<class>com.bbsBlog.entity.Favorite</class>
+		<class>com.bbsBlog.entity.FilterWord</class>
+		<class>com.bbsBlog.entity.FlagHi</class>
+		<class>com.bbsBlog.entity.ForumLabel</class>
+		<class>com.bbsBlog.entity.ForumPost</class>
+		<class>com.bbsBlog.entity.ForumReply</class>
+		<class>com.bbsBlog.entity.ForumTP</class>
+		<class>com.bbsBlog.entity.ForumUpHi</class>
+		<class>com.bbsBlog.entity.Friend</class>
+		<class>com.bbsBlog.entity.Label</class>
+		<class>com.bbsBlog.entity.Master</class>
+		<class>com.bbsBlog.entity.MasterApply</class>
+		<class>com.bbsBlog.entity.Message</class>
+		<class>com.bbsBlog.entity.MessageText</class>
+		<class>com.bbsBlog.entity.Notice</class>
+		<class>com.bbsBlog.entity.PersonalInfo</class>
+		<class>com.bbsBlog.entity.PhotoPJ</class>
+		<class>com.bbsBlog.entity.PostStatus</class>
+		<class>com.bbsBlog.entity.QAConcern</class>
+		<class>com.bbsBlog.entity.QAFavor</class>
+		<class>com.bbsBlog.entity.Question</class>
+		<class>com.bbsBlog.entity.QuestionLabel</class>
+		<class>com.bbsBlog.entity.QuestionPJ</class>
+		<class>com.bbsBlog.entity.RechargeHi</class>
+		<class>com.bbsBlog.entity.Role</class>
+		<class>com.bbsBlog.entity.Suggestion</class>
+		<class>com.bbsBlog.entity.Tpjl</class>
+		<class>com.bbsBlog.entity.UserAlbum</class>
+		<class>com.bbsBlog.entity.UserAlbumPhoto</class>
+		<class>com.bbsBlog.entity.UserInfo</class>
+		<class>com.bbsBlog.entity.UserSecurity</class>
+		<class>com.bbsBlog.entity.UserUpHi</class>
+		<class>com.bbsBlog.entity.WealthBoard</class>
+		<class>com.bbsBlog.entity.WealthTradeHi</class>
+		
+	</persistence-unit>
+</persistence>

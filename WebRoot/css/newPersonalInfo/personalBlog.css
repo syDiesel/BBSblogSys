@@ -1,0 +1,215 @@
+@CHARSET "UTF-8";
+.blog_main{
+	width:1024px;
+	height:605px;
+	margin:0px auto;
+	background:#fff;
+	overflow: hidden;
+}
+.blog_title{
+	width:100%;
+	height:40px;
+	float:left;
+	margin-top:60px;
+	margin-bottom:-30px;
+	overflow: hidden;
+}
+.blog_title h3{
+	line-height:30px;
+	font-size:20px;
+	font-weight:bold;
+	margin:0px 40px;	
+	font-weight:normal;
+}
+.blog_content{
+	width:960px;
+	height:460px;
+}
+.interest_blog_Info {
+	width: 960px;
+	display: none;
+	margin:40px auto;
+	padding-top:50px;
+}
+
+.interest_block {
+	display: block;
+}
+.interest_blog_Info_left {
+	width: 960px;
+	height:260px;
+	margin:0px;
+}
+.interest_more a{
+		color:#666666;
+}
+th{
+	font-weight:normal;
+}
+
+.interest_blog_Info_left_Info {
+	overflow: hidden;
+	text-align: center;
+	table-layout: fixed;
+	line-height:27px;
+}
+
+.interest_blog_Info_left_Info tr {
+	height: 20px;
+}
+
+.interest_blog_Info_left_Info td {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; /*截断文字，显示省略号(...)*/
+	-o-text-overflow: ellipsis; /*Opera的专用截断文字的属性*/
+}
+
+.interest_blog_Info_left_Info a {
+	color: blue;
+}
+
+.interest_blog_Info_left_Info a:hover {
+	color: red;
+}
+.tr1{
+	background:#e7edf6;
+	font-size:14px;
+	font-family:"宋体";
+	font-weight:normal;
+	line-height:27px;
+}
+/*分页  */
+.page {
+	width:100%;
+	text-align: center;
+	height: 35px;
+    float:left;
+}
+
+.page ul {
+	margin: 0 auto;
+	overflow: hidden;
+	text-align:center;
+}
+
+.page ul li{
+	display:inline-block;
+}
+
+.page a {
+	float: left;
+	margin-right: 5px;
+	padding: 4px 8px 3px;
+	height: 18px;
+	border: 1px solid #CDCDCD;
+	white-space: nowrap;
+}
+
+.page a:hover {
+	border: 0;
+	padding: 5px 9px 4px;
+	color: #fff;
+	background: #1C86EE;
+}
+
+.nowpage {
+	color: #fff;
+	background: #1C86EE;
+	border: 0;
+	padding: 5px 9px 4px;
+}
+/*资源分享  */
+.floor3 {
+	clear: both;
+	overflow: hidden;
+	margin-top:80px;
+}
+
+.attach {
+	width: 960px;
+	
+	background: #fff;
+	margin:auto;
+}
+
+.attachTitle {
+	border-top:3px solid #087ec4;
+	width: 960px;
+	height: 35px;
+}
+
+.attachTitle h3 {
+	color: #333;
+	line-height: 35px;
+	margin-left: 40px;
+	float: left;
+	font-size:18px;
+	font-weight:bold;
+	font-family:"微软雅黑";
+	text-shadow:1px 1px 2px #999;
+}
+
+.attachContent {
+	width: 960px;
+	height:450px;
+	margin: 10px auto;
+}
+
+.attachInfo {
+	width: 960px;
+	table-layout: fixed;
+    line-height:27px;
+}
+
+.attachInfo tr {
+	height: 22px;
+}
+
+.attachInfo th {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: normal;
+}
+.th1{
+	color:#fdaa01;
+}
+
+.attachInfo a {
+	color: blue;
+}
+
+.attachInfo a:hover {
+	color: red;
+}
+.title_right{
+	float:right;
+	margin-right:50px;
+	height:35px;
+	margin-top:-32px;
+}
+.title_right ul{
+	margin: 0 auto;
+}
+.title_right li{
+	float:left;
+	font-family:"Microsoft YaHei UI";
+	font-size:19px;
+	line-height:35px;
+}
+.title_right li a{
+	color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+

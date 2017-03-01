@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+.person_mainbox{
+	width:1024px;
+	margin:0px auto;
+	background:#fff;
+	min-height:1300px;
+}
+
+.page_title{
+	width:100%;
+	height:60px;
+	float:left;
+	margin-top:60px;
+}
+
+.page_title h3{
+	line-height:30px;
+	font-size:20px;
+	margin:0px 40px;	
+	font-weight:normal;
+}
+
+.jibenziliao,.xiangxiziliao,.jiaoyubeijing,.gongzuoxinxi{
+	width:100%;
+	height:300px;
+	float:left;
+}
+
+.person_topic{
+	font-size:16px;
+	margin-left:70px;
+}
+
+.person_topic a{
+	background: #fff;
+	border: #087ec4 1px solid;
+	border-radius: 5px;
+	color: #087ec4;
+	float: right;
+	margin-right: 150px;
+	font-size: 12px;
+	padding: 3px 20px;}
+
+.person_table{
+	width:700px;
+	margin-top:10px;
+	margin-left:70px;
+	font-size:13px;
+}
+
+.person_table #td1{
+	width:100px;
+	text-align:right;	
+	height:40px;
+	vertical-align:top;
+}
+
+.person_table #td2{
+	width:250px;
+	text-align:left;	
+	height:40px;
+	vertical-align:top;
+	word-wrap:break-word;
+	word-break:break-all;
+}

@@ -1,0 +1,355 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>Terms of Service</title>
+
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+<link href="<%=basePath%>css/home.css" rel="stylesheet" type="text/css" />
+<link href="<%=basePath%>css/qiantai/more.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/qiantai/agree.css" rel="stylesheet"
+	type="text/css" />
+<link type="text/css" href="<%=basePath%>css/button.css"
+	rel="stylesheet" />
+<link href="<%=basePath%>css/qiantai/login.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript"
+	src="<%=basePath%>js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/index/index.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/index/language.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/login_all.js"></script>
+
+</head>
+<link type="image/x-icon" href="<%=basePath%>img/bitbug_favicon.ico"
+	rel="shortcut icon" />
+
+<link href="<%=basePath%>css/headfoot.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/index_default.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/Index/index.css" rel="stylesheet"
+	type="text/css" />
+</head>
+
+<body style="font-family: arial;">
+<!---------------------------login_begin  ------------------------->
+	<div id="main_login" class="main_login"></div>
+	<div class="login_div" id="login_div">
+		<div class="login_head">
+			<h1>Login</h1>
+			<span class="login_head_right"> <span
+				class="login_head_right_none">No Account</span>&nbsp;&nbsp;&nbsp;<a
+				href="<%=basePath%>isAgree.do">Register</a> </span>
+		</div>
+		<div class="login_form">
+			<form action="<%=basePath%>login.do" method="post">
+				<input type="hidden" value="" id="login_href" name="login_href">
+				<table>
+					<tr>
+						<td><input type="text" name="userName" placeholder="User Name"
+							class="login_td"></td>
+					</tr>
+					<tr>
+						<td><input type="password" name="password" placeholder="Cipher"
+							class="login_td"></td>
+					</tr>
+					<tr>
+						<td><input class="login_but" accesskey="l" value="Login"
+							tabindex="5" type="submit"> <!-- <span class="login_span"><input type="checkbox" name="">保持登录</span> -->
+							<span class="login_span"><a
+								href="<%=basePath%>ToGetBackPwd.do">Forget Cipher？</a>
+						</span></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<!-- <div class="login_other">
+			<p>login other way</p>
+			<div style="width:380px;height:80px;padding-top:20px;">
+				<button class="login_sina"></button>
+				<button class="login_qq"></button>
+			</div>
+		</div> -->
+	</div>
+	<!---------------------------login_end  ------------------------->
+	<!--head begin-->
+	<div ID="head" class="head">
+		<!--top-->
+		<div id="top" class="top">
+			<div class="top-btn-left">
+				<a href="javascript:AddFavorite(window.location,document.title)">Save Us</a>
+				<!-- <a href="javascript:void(0)">联系我们</a> -->
+			</div>
+
+			<div class="top-btn-right">
+
+				<!-- <div class="language">
+					<a href="javascript:changeLocale('locale=zh_CN')">简</a> 
+					<a href="javascript:changeLocale('locale=zh_TW')">繁</a>
+					<a href="javascript:changeLocale('locale=en_US')">EN</a>
+				</div>  -->
+				<c:if test="${!empty userInfo }">
+					<div class="user-btn">
+						<ul>
+							<span class="ban">&nbsp;</span>
+							<li id="personPic"><a><img
+									src="<%=basePath%>${userInfo.headImg}" width="20" height="20" />
+							</a>
+								<div class="personInfo" id="personInfo">
+									<div class="personInfoPart1">
+										<a href="<%=basePath%>web/Blog/${userInfo.nickName}"> <img
+											src="<%=basePath%>${userInfo.headImg}" width="90" height="90" />
+										</a>
+										<div class="personInfoDetail">
+											<p>
+											<h3>${userInfo.nickName}</h3>
+											</p>
+											<p>
+
+												<span>Level：</span>
+
+												<c:forEach begin="1" end="${userInfo.userLevel}" step="1">
+													<img src="<%=basePath%>images/Forums/star.png" width="10px"
+														height="10px" />
+												</c:forEach>
+												<c:forEach begin="${userInfo.userLevel+1}" end="7" step="1">
+													<img src="<%=basePath%>images/Forums/0star.png"
+														width="10px" height="10px" />
+												</c:forEach>
+
+											</p>
+											<br /> <a class="pConfig"
+												href="<%=basePath%>u/detail/${userInfo.id}.html"><span
+												class="icon-pConfig"></span>Edit</a>
+										</div>
+									</div>
+									<div class="personInfoPart2">
+										<div class="config">
+											<a href="<%=basePath%>u/setting/password"><span
+												class="icon-cog"></span>Setting</a>
+
+										</div>
+										<div class="logout">
+											<a href="<%=basePath%>logout.do" title="Exit"><span
+												class="icon-logout"></span> </a>
+										</div>
+
+									</div>
+
+								</div></li>
+
+
+							<span class="ban">&nbsp;</span>
+							<li style="height: 30px;"><div class="config">
+									<a href="<%=basePath%>/web/PrivateMsg/RecBox"><span
+										class="icon-msg"></span><em>${newMsgCount }</em> </a>
+
+								</div></li>
+							<span class="ban">&nbsp;</span>
+						</ul>
+
+
+
+					</div>
+				</c:if>
+
+
+
+
+				<div class="charge">
+					<c:if test="${empty userInfo }">
+						<span class="ban">&nbsp;</span>
+						<a href="javascript:void(0)" id="login_all">Log in</a>
+						<span class="ban">&nbsp;</span>
+						<a href="<%=basePath%>isAgree.do">Register</a>
+					</c:if>
+					<span class="ban">&nbsp;</span> <a
+						href="<%=basePath%>ToGetBackPwd.do">Find Cipher</a> <span class="ban">&nbsp;</span>
+					<a href="javascript:void(0)">Voucher Center</a> <span class="ban">&nbsp;</span>
+				</div>
+			</div>
+			<!---top-btn-right  end-->
+		</div>
+		<!--top end-->
+		<!--logo-->
+		<div class="logo">
+			<div class="yszs">
+				<a href="#"><img src="<%=basePath%>img/Index-logo.png" /> </a>
+			</div>
+			<div class="searchBanner">
+				<FORM name="search_form_1" id="search_form_1"
+					action="<%=basePath%>search.do">
+					<DIV class="search-text-con2">
+						<INPUT name="search" class="search-text2" id="q1" type="text"
+							value="" autocomplete="off" path="q" placeholder="  input keyword">
+						<input type="hidden" id="txtSear" value="0" name="searchMethod" />
+					</DIV>
+					<DIV class="search-btn-con2">
+						<INPUT class="search-btn2" type="submit" value="Search">
+					</DIV>
+				</FORM>
+			</div>
+			<div class="app">
+				<a href="javascript:void(0)"></a>
+				<h3 style="font-size:14px;">App Download</h3>
+			</div>
+
+		</div>
+		<!--logo end-->
+		<!--nav-->
+		<div class="nav">
+			<ul>
+				<li><a href="<%=basePath%>toIndexHome">Frontpage</a></li>
+				<li><a href="<%=basePath%>web/Blog/index.html">Blog</a></li>
+				<li><a href="<%=basePath%>listPostByBoard">Forum</a></li>
+				<li><a href="<%=basePath%>web/QandA/Home.html">Q & A</a></li>
+				<li><c:if test="${userInfo.role.id!=1 }">
+						<a href="<%=basePath%>contact.do">Service Center</a>
+						</c:if>
+						<c:if test="${userInfo.role.id==1 }">
+						<a href="<%=basePath%>toManagement">Supervision</a>
+						</c:if></li>
+				<li><a href="<%=basePath%>faq.do">Regulation</a></li>
+			</ul>
+		</div>
+		<!--nav end-->
+		<!--pic-->
+		<div class="Logo_pic"></div>
+		<!--pic end-->
+
+
+
+	</div>
+	<!--head end-->
+
+	<!--main start-->
+	<div class="main">
+		<div class="main_head">
+			<h3 style="font-size:30px;">
+				Terms of Service
+			</h3>
+		</div>
+		<style>
+.main {
+	height: auto;
+	overflow: hidden;
+
+}
+
+.main_content p{
+	width: 800px;
+	white-space: normal;
+	margin: 5px auto;
+}
+</style>
+		<div class="main_content">
+
+<br/><br/><br/>
+
+<p>
+Welcome to Unionjoyers (also "Youshizhishi" in Chinese). We provide the services to you under these Terms of Service ("Terms"). In these Terms "you" means the individuals using our services. By accessing and using our services you accept the Terms and agree to be bound by them. Please read them carefully.
+</p><br/><p>
+1. You are solely responsible for all materials (such as information, data, text, software, sound, photographs, graphics, music & video, messages and others) that you submit to our services. You agree not to do anything on, or submit any user content to us that (including but not limited to): 
+</p><p>a. infringes any laws or regulations or the rights of another (for example, the laws of copyright or privacy) or encourages others to do so;
+</p><p>b. is violent, obscene, threatening, abusive, harmful to others, invasive of another's privacy, hateful, harassing, discriminatory or otherwise objectionable;
+</p><p>c. is “spam” or any other form of unsolicited advertising, promotional materials, or commercial messages;
+</p><p>d. contains or links to computer viruses, malware or any other malicious code;
+</p><p>e. disrupts or impairs the normal operation of our services, or servers or networks connected to our services.
+
+</p><br/><p>2. We respect other people's rights (for example, intellectual property), and expect you to do the same. We can remove any content or information you post if we believe that it violates these Terms or our policies. If you believe that any of your rights have been infringed on the services, please report us the problem to delete.
+
+</p><br/><p>3. Information obtained through our services is for informational purposes only and should never be used as a substitute for advice from a qualified professional. The opinions expressed through information and user content on the services are the opinions of the individual author and do not reflect the opinions of us.
+
+</p><br/><p>4. You must evaluate, and bear all risks associated with, the use of any user content, including any reliance on the accuracy, completeness, or usefulness of any of them. Also we are not responsible for any offensive, inappropriate, obscene, unlawful or otherwise objectionable content or information you may encounter.
+
+
+
+</p><br/><p>5. You agree to indemnify and hold us, and our subsidiaries, affiliates, officers, agents, co-branders or other partners, and employees, harmless from any claim or demand, including attorneys’ fees, made by any third party due to or arising out of your content, your use of the service, your connection to the service, your violation of the Terms, or your violation of any rights of another.
+
+</p><br/><p>6. When you submit or make available user content on publicly accessible areas of our services, you give us the worldwide, royalty-free, non-exclusive, perpetual, irrevocable, and fully sub-licensable license to use, distribute, reproduce, adapt, publish, translate, create derivative works from, publicly perform and publicly display the user content anywhere on our service network.
+
+</p><br/><p>7. Any unauthorized reproduction, publication, further distribution or public exhibition of any of the materials provided on our website services, is strictly prohibited. You may not use content from our services unless you obtain permission from its owner and us. 
+
+</p><br/><p>8. We provide our services using a commercially reasonable level of skill and care and we hope that you will enjoy using them. But we provide the Services “as is”, which means we cannot represent or guarantee that: 
+</p><p>a. your use of our services will meet your requirements;
+</p><p>b. your use of our services will be uninterrupted, timely, secure or free from error;
+</p><p>c. any information obtained by you as a result of your use of our services will be accurate or reliable.
+
+</p><br/><p>9. We have no responsibility to you or to pay you compensation for financial loss or loss of opportunity, goodwill, reputation, business, revenue, profit, or savings you expected to make, or wasted expenditure, for any information or user content which is lost, corrupted or mis-delivered, or any damage to your computer system, internet access, download or display device or loss of data.
+
+</p><br/><p>10. We are constantly changing and improving our services. So we may, without telling you, add or remove functionalities or features, and suspend or stop a service altogether. 
+
+</p><br/><p>11. We may, without telling you, immediately cancel or limit your access to certain services for the following reasons, including but not limited to: 
+</p><p>a. if you violate the Terms;
+</p><p>b. requests by law enforcement or other government agencies under valid legal process;
+</p><p>c. unexpected technical or security issues or problems; 
+</p><p>d. a period of 180 days in account inactivity.
+</p><br/><p>We will make these decisions in our sole discretion. We will not be responsible for any loss you may suffer through the cancellation of your services.
+
+</p><br/><p>12. Our services, which includes any necessary software and website design, contain proprietary and confidential information that is protected by applicable intellectual property and other laws. Except as expressly permitted by applicable law or authorized by us, you will not use, distribute, reproduce, adapt, publish, translate such software and design.
+
+</p><br/><p>13. Our trademarks, logos, brand features, and service names are trademarks and the property of JIE & CHEN Development Company. You agree not to use in any manner, our marks without the prior written permission.
+
+
+
+Terms dated October 27, 2014.
+
+
+
+
+</p><br/>
+
+
+
+			<table>
+				<tr>
+					<td><a href="<%=basePath%>agree.do"><button
+								class="submitButton"
+								style="margin-left: 320px; margin-top: 100px;"
+								onclick="javascrtpt:window.location.href='<%=basePath%>agree.do'">
+								Agree
+							</button></a></td>
+					<td><a href="<%=basePath%>unagree.do"><button
+								class="submitButton"
+								style="margin-left: 100px; margin-top: 100px;"
+								onclick="javascrtpt:window.location.href='<%=basePath%>unagree.do'">
+								Don't Agree
+							</button></a></td>
+				</tr>
+			</table>
+			<br/><br/><br/>
+		</div>
+	</div>
+	<!--main end-->
+
+<!--footer-->
+
+	<div class="footer">
+		<h3>Copyright © 2014 JIE & C DEV(HK)CO L.&nbsp;&nbsp;All Rights
+			Reserved.</h3>
+	</div>
+	<!--footer end-->
+
+</body>
+</body>
+</html>

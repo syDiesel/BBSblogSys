@@ -1,0 +1,262 @@
+.art-list{
+	margin:10px auto;
+	text-align:center;
+	width:960px;
+	height:1000px;
+	background:#FFF;
+	position:relative;
+	line-height:60px;
+	border: #999999 1px solid;
+}
+
+.art-cont{
+margin-top:10px;
+margin:20px 20px 20px 20px;
+width:918px;
+height:800px;
+text-align: left;
+position:relative;
+
+}
+.list_item{
+display: block;
+clear: both;
+background: url(../../images/Forums/line_1.gif) repeat-x bottom;
+}
+.list_item:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.article_title {
+display: block;
+margin: 5px 0px;
+color: #000;
+font: normal 20px/30px 'Microsoft YaHei';
+}
+article_title:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.article_description {
+color: #666;
+font: normal 14px/24px Arial;
+text-indent: 2em;
+}
+.article_manage {
+padding: 5px 0;
+color: #999;
+font: normal 12px/24px Arial;
+text-align: right;
+}
+.article_content {
+height:660px;
+font-family: Courier New,Console,Verdana,"Î¢ÈíÑÅºÚ";
+font: normal 14px/26px Arial;
+}
+.link_postdate {
+margin: 0 5px 0 0;
+}
+.link_view {
+padding: 0 0 0 14px;
+background:url(../../images/Forums/ico_view.png) no-repeat left center;
+
+}
+.link_collect {
+padding: 0 0 0 14px;
+background: url(../../images/houtai/add.gif) no-repeat left center;
+
+}
+.art-pag{
+margin:10px auto 0px 10px;
+width:938px;
+height:80px;
+}
+.tag{
+padding: 0 0 0 14px;
+background:url(../../images/houtai/edit.gif) no-repeat left center;
+}
+.art-page a{
+
+height: 22px;
+margin: 0 2px;
+padding: 0 8px;
+border: solid 1px  #999999;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+-khtml-border-radius: 2px;
+border-radius: 2px;
+background: #FFF;
+color: #333;
+font: normal 12px/22px Arial, Helvetica, sans-serif;
+cursor: pointer;
+}
+/*²©¿ÍÄÚÈÝ*/
+
+.art-right{
+width:962px;
+height:1000px;
+float:left
+}
+
+.art-details{
+margin-top:10px;
+width:962px;
+height:930px;
+
+}
+.article_title {
+display: block;
+height:35px;
+margin: 5px 0px;
+color: #000;
+font: normal 20px/30px 'Microsoft YaHei';
+background: url(../../images/Forums/line_1.gif) repeat-x bottom;
+}
+.article_manage {
+height:870px;
+padding: 5px 0;
+color: #999;
+font: normal 12px/24px Arial;
+text-align: right;
+background: url(../../images/Forums/line_1.gif) repeat-x bottom;
+}
+article_manage .link_categories {
+float: left;
+}
+.article_manage span {
+margin: 0 5px;
+}
+.article_manage .link_postdate {
+margin: 0 5px 0 0;
+}
+.tag2box {
+margin: 10px 0;
+height:20px;
+background-image:url(../../images/houtai/edit.gif) no-repeat;
+
+}
+.details .article_content {
+margin: 20px 0 0 0;
+font-family: Courier New,Console,Verdana,"Î¢ÈíÑÅºÚ";
+font: normal 14px/26px Arial;
+}
+
+.article_next_prev {
+display: block;
+color: #666;
+font: normal 14px/24px "Microsoft YaHei",Arial, Helvetica, sans-serif;
+clear: both;
+float: left;
+margin: 0px 0 5px 0;
+padding: 0;
+padding-top: 10px;
+}
+.article_next_prev li {
+list-style-type: none;
+clear: both;
+padding: 0 0 3px;
+overflow: hidden;
+}
+#digg {
+display: block;
+clear: both;
+width: 962px;
+height:65px;
+padding: 30px 0 15px;
+text-align: center;
+}
+.digg_enable {
+background: #999999;
+text-align: center;
+cursor: pointer;
+}
+.digg {
+display: inline-block;
+width: 62px;
+height: 62px;
+overflow: hidden;
+margin: 0 2px;
+}
+.digg dl{
+float: inherit;
+}
+.digg dt {
+margin: 0px;
+padding: 12px 0 3px 0;
+color: #FFFFFF;
+font: normal 27px/30px 'Microsoft YaHei';
+}
+.digg_disable dd {
+color: #000033;
+}
+.digg dd {
+margin: 0px;
+color: #FFFFFF;
+font: normal 12px/22px Arial;
+
+}
+user agent stylesheetdd {
+display: block;
+-webkit-margin-start: 40px;
+}
+
+
+dl {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+.bbs-title{
+    width:958px;
+	height:68px;
+	border-bottom:solid 1px #000000;
+
+}
+.bbs-relief{
+width:958px;
+height:860px;
+
+}
+.bbs-btn{
+width:958px;
+	height:68px;
+}
+.art-bac{
+margin-top:2px;
+height:10px;
+width:958px;
+}
+.article_next_prev li.prev_article span {
+background-image:url(../../images/Forums/blog-page-arr.png);
+background-repeat: no-repeat;
+background-position: 10px 8px;
+}
+.article_next_prev li span {
+display: block;
+
+width: 52px;
+padding: 0 0 0 27px;
+height: 26px;
+background-color: #999;
+color: #FFF;
+font-size: 14px;
+
+
+}
+.btn-back{
+width:958px;
+height:60px;
+text-align:center;
+margin-left: 457px;
+
+
+}

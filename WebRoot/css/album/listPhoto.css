@@ -1,0 +1,65 @@
+
+.photo_main{
+	width:595px;
+	margin:10px auto;
+	background-color: white;
+	
+}
+
+.photo_result{
+	margin:10px auto;
+	width:595px;
+	height:650px;
+	width:670px\9;
+	margin-left:45px\9;
+	overflow:hidden;
+}
+
+
+a:hover {
+	color:#fff; 
+}
+
+
+
+.photo_list{
+	float:left;
+	margin:6px 10px;
+    padding:0px;
+   
+}
+.delete{
+	margin-top:0px;
+	float:right;
+}
+.delete:hover{
+	color:orange;
+}
+.photo_id{
+	width:140px;
+	margin:5px 10px;
+	
+}
+.fenye_zphoto{
+	width:595px;
+	margin-top:-20px;
+	float:right;
+	font-size:15px;
+	padding-bottom:20px;
+	text-align: right;
+}
+.fenye_zphoto a:hover{
+	color:orange;
+}
+.fenye_photo{
+	width:595px;
+	margin-top:60px;
+	float:right;
+	font-size:15px;
+	padding-bottom:20px;
+	text-align: right;
+}
+
+.fenye_photo a:hover{
+	color:orange;
+}

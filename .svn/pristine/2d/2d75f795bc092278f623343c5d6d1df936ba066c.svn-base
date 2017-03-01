@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" import="java.util.*,com.bbsBlog.entity.ForumPost,java.text.SimpleDateFormat;" pageEncoding="utf-8"%>
+
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path +  "/";
+%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edit Post</title>
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+
+<link type="text/css" href="<%=basePath%>css/Forums1/MASK/mask.css" rel="stylesheet" />
+<link type="text/css" href="<%=basePath%>css/Forums1/post/forum_post.css" rel="stylesheet" />
+<link href="<%=basePath%>css/headfoot.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/index_default.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/Index/index.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/button.css" rel="stylesheet"
+	type="text/css" />
+<link href="<%=basePath%>css/qiantai/login.css" rel="stylesheet" type="text/css" />
+
+<script charset="utf-8" src="<%=basePath%>kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="<%=basePath%>kindeditor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="<%=basePath%>kindeditor/plugins/code/prettify.js"></script>
+<script src="<%=basePath%>js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/index/index.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/index/language.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/Forum/home.js"></script>
+<script src="<%=basePath%>js/Forum/Forums_post.js"></script>
+<script  src="<%=basePath%>js/Forum/listLabelByBoard.js"></script>
+<script src="<%=basePath%>js/Forum/showdate.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/checkLable.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/login_all.js"></script>
+<script>
+ var editor;
+	KindEditor.ready(function(K) {
+	        editor= K.create('textarea[name="postContent"]', {
+			cssPath : '<%=basePath%>kindeditor/plugins/code/prettify.css',
+			uploadJson : '<%=basePath%>kindeditor/jsp/upload_json.jsp',
+			fileManagerJson : '<%=basePath%>kindeditor/jsp/file_manager_json.jsp',
+			allowFileManager : true,
+			autoHeightMode : false,
+
+			afterCreate : function() {
+				this.loadPlugin('autoheight');
+				var self = this;
+				K.ctrl(document, 13, function() {
+					self.sync();
+					document.forms['example'].submit();
+				});
+				K.ctrl(self.edit.doc, 13, function() {
+					self.sync();
+					document.forms['example'].submit();
+				});
+			},afterChange:function(){
+			     if(this.count('text')<=0)
+			     {
+			         $(".btn_submit").attr("disabled", true);
+			         
+			     }else{
+			         $(".btn_submit").attr("disabled", false);
+			     }
+			     var limitNum = 15000;  //设定限制字数
+                 var pattern = "You can also enter " + limitNum + " words";
+                 $('.word_surplus').html(pattern); //输入显示
+                 if(this.count('text') > limitNum) {
+                 pattern = ("Count exceeds the limit");
+                    $("#button").attr("disabled", true);
+                    alert("Count exceeds the limit");
+               
+                  } else {
+                 //计算剩余字数
+                 var result = limitNum - this.count('text');
+                 pattern = "You can also enter " +  result + " words";
+                 }
+                 $('.word_surplus').html(pattern); //输入显示
+       
+			},afterBlur: function(){this.sync();}
+			
+			
+			
+		});
+		
+		
+	
+		
+		prettyPrint();
+		
+		
+	});
+
+      function reloadcode(){
+  			
+                    var verify=document.getElementById('code');
+              
+                verify.setAttribute('src','<%=basePath%>web/management/makeCertPicSmall.jsp?id='
+						+ new Date().getTime());
+	}
+	
+	
+	
+	function setImg()
+	{
+	         
+	          var imgs = editor.edit.iframe.get().contentWindow.document.body.getElementsByTagName('img');
+	         
+			    if (imgs.length > 0) {
+			        document.getElementById('hiddenImg').value=imgs[0].src;
+			      
+			    }
+			    
+			    submitForm();
+			    
+	}
+	
+	
+	var a ={"a":"<fmt:message key="You can also enter"></fmt:message>"};
+	var a1 ={"a1":"<fmt:message key="words"></fmt:message>"};
+	var a2 ={"a2":"<fmt:message key="Count exceeds the limit"></fmt:message>"};
+	var a3 ={"a3":"<fmt:message key="Your level is not enough, need to pay a panacea"></fmt:message>"};
+	var a4 ={"a4":"<fmt:message key="Are you sure you pay a panacea"></fmt:message>"};
+	var a5 ={"a5":"<fmt:message key="All is not enough, please recharge"></fmt:message>"};
+	var a6 ={"a6":"<fmt:message key="Voting options cannot be empty"></fmt:message>"};
+	var a7 ={"a7":"<fmt:message key="The end time must be greater than the start time"></fmt:message>"};
+	var a8 ={"a8":"<fmt:message key="Vote required to pay ten a panacea"></fmt:message>"};
+	var a9 ={"a9":"<fmt:message key="Determining payment ten panaceas"></fmt:message>"};
+	var a10 ={"a10":"<fmt:message key="Please choose the label"></fmt:message>"};
+	var a11 ={"a11":"<fmt:message key="Title must not be empty"></fmt:message>"};
+	var a12 ={"a12":"<fmt:message key="The title please don't exceed 40 characters"></fmt:message>"};
+	var a13 ={"a13":"<fmt:message key="Invalid Validation Code"></fmt:message>"};
+	var a14 ={"a14":"<fmt:message key="Please fill in time"></fmt:message>"};
+	
+	
+	
+
+	 </script>
+
+</head>
+
+<body style="text-align:center;font-family:Arial,verdana,tahoma;">
+<input type="hidden" id="userLevel" value="${userLevel}"/>
+<input type="hidden" id="lingdan" value="${lingdan}"/>
+<input type="hidden" id="userLingdan" value="${userInfo.lingdan}"/>
+<input type="hidden" id="discuss" value="${discuss}"/>
+
+<!---------------------------login_begin  ------------------------->
+<div id="main_login" class="main_login">
+  </div>
+  <div class="login_div" id="login_div">
+        <div class="login_head">
+          <h1>login</h1>
+          <span class="login_head_right">
+              <span class="login_head_right_none">no account</span>&nbsp;&nbsp;&nbsp;<a href="<%=basePath%>isAgree.do">register</a>
+          </span>
+        </div>
+        <div class="login_form">
+           <form action="<%=basePath %>login.do" method="post">
+            <input type="hidden" value="" id="login_href" name="login_href">
+              <table>
+                  <tr>
+                     <td>
+                         <input type="text" name="userName" placeholder="user name" class="login_td">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                         <input type="password" name="password" placeholder="cipher" class="login_td">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                          <input class="login_but" accesskey="l" value="login" tabindex="5" type="submit">
+                          <!-- <span class="login_span"><input type="checkbox" name="">in login</span> -->
+                          <span class="login_span"><a href="<%=basePath%>ToGetBackPwd.do">forget cipher？</a></span>
+                     </td>
+                  </tr>
+              </table>
+           </form>
+        </div>
+        <div class="login_other">
+           <p>login other way</p>
+           <div style="width:380px;height:80px;padding-top:20px;">
+               <button class="login_sina"></button>
+               <button class="login_qq"></button>
+           </div>
+        </div>
+      </div>
+    <!---------------------------login_end  ------------------------->
+	<!--head begin-->
+	<div ID="head" class="head">
+		<!--top-->
+		<div id="top" class="top">
+			<div class="top-btn-left">
+				<a href="javascript:AddFavorite(window.location,document.title)">save us</a>
+				<!-- <a href="javascript:void(0)">contact us</a> -->
+			</div>
+
+			<div class="top-btn-right">
+
+				<!-- <div class="language">
+					<a href="javascript:changeLocale('locale=zh_CN')">简</a> 
+					<a href="javascript:changeLocale('locale=zh_TW')">繁</a>
+					<a href="javascript:changeLocale('locale=en_US')">EN</a>
+				</div>  -->
+				<c:if test="${!empty userInfo }">
+					<div class="user-btn">
+						<ul>
+							<span class="ban">&nbsp;</span>
+							<li id="personPic"><a><img
+									src="<%=basePath%>${userInfo.headImg}" width="20" height="20" />
+							</a>
+								<div class="personInfo" id="personInfo">
+									<div class="personInfoPart1">
+										<a href="<%=basePath%>web/Blog/${userInfo.nickName}"> <img
+											src="<%=basePath%>${userInfo.headImg}" width="90" height="90" />
+										</a>
+										<div class="personInfoDetail">
+											<p>
+											<h3>${userInfo.nickName}</h3>
+											</p>
+											<p>
+
+												<span>level:</span>
+
+												<c:forEach begin="1" end="${userInfo.userLevel}" step="1">
+													<img src="<%=basePath%>images/Forums/star.png" width="10px"
+														height="10px" />
+												</c:forEach>
+												<c:forEach begin="${userInfo.userLevel+1}" end="7" step="1">
+													<img src="<%=basePath%>images/Forums/0star.png"
+														width="10px" height="10px" />
+												</c:forEach>
+
+											</p>
+											<br /> <a class="pConfig"
+												href="<%=basePath%>u/detail/${userInfo.id}.html"><span
+												class="icon-pConfig"></span>edit</a>
+										</div>
+									</div>
+									<div class="personInfoPart2">
+										<div class="config">
+											<a href="<%=basePath%>u/setting/password"><span
+												class="icon-cog"></span>setting</a>
+
+										</div>
+										<div class="logout">
+											<a href="<%=basePath%>logout.do" title="exit"><span
+												class="icon-logout"></span>
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+
+							<span class="ban">&nbsp;</span>
+							<li style="height: 30px;"><div class="config">
+									<a href="<%=basePath%>/web/PrivateMsg/RecBox"><span
+										class="icon-msg"></span><em>${newMsgCount }</em>
+									</a>
+
+								</div>
+							</li>
+							<span class="ban">&nbsp;</span>
+						</ul>
+
+
+
+					</div>
+				</c:if>
+
+
+
+
+				<div class="charge">
+					<c:if test="${empty userInfo }">
+						<span class="ban">&nbsp;</span>
+						<a href="javascript:void(0)" id="login_all">log in</a>
+						<span class="ban">&nbsp;</span>
+						<a href="<%=basePath%>isAgree.do">register</a>
+					</c:if>
+					<span class="ban">&nbsp;</span> <a
+						href="<%=basePath%>ToGetBackPwd.do">find cipher</a> <span class="ban">&nbsp;</span>
+					<a href="javascript:void(0)">voucher center</a> <span class="ban">&nbsp;</span>
+				</div>
+			</div>
+			<!---top-btn-right  end-->
+		</div>
+		<!--top end-->
+		<!--logo-->
+		<div class="logo">
+			<div class="yszs">
+				<a href="#"><img src="<%=basePath%>img/Index-logo.png" />
+				</a>
+			</div>
+			<div class="searchBanner">
+				<FORM name="search_form_1" id="search_form_1"
+					action="<%=basePath%>search.do">
+					<DIV class="search-text-con2">
+						<INPUT name="search" class="search-text2" id="q1" type="text"
+							value="" autocomplete="off" path="q" placeholder="input keyword">
+						<input type="hidden" id="txtSear" value="0" name="searchMethod" />
+					</DIV>
+					<DIV class="search-btn-con2">
+						<INPUT class="search-btn2" type="submit" value="search">
+					</DIV>
+				</FORM>
+			</div>
+			<div class="app">
+				<a href="javascript:void(0)"></a>
+				<h3 style="font-size:14px;">app download</h3>
+			</div>
+
+		</div>
+		<!--logo end-->
+		<!--nav-->
+		<div class="nav">
+			<ul>
+				<li><a href="<%=basePath%>toIndexHome">frontpage</a></li>
+				<li><a href="<%=basePath%>web/Blog/index.html">blog</a></li>
+				<li><a href="<%=basePath%>listPostByBoard">forum</a></li>
+				<li><a href="<%=basePath%>web/QandA/Home.html">Q & A</a></li>
+				<li><c:if test="${userInfo.role.id!=1 }">
+						<a href="<%=basePath%>contact.do">service center</a>
+						</c:if>
+						<c:if test="${userInfo.role.id==1 }">
+						<a href="<%=basePath%>toManagement">supervision</a>
+						</c:if></li>
+				<li><a href="<%=basePath%>faq.do">regulation</a></li>
+			</ul>
+		</div>
+		<!--nav end-->
+		<!--pic-->
+		<div class="Logo_pic"></div>
+		<!--pic end-->
+
+
+
+	</div>
+	<!--head end-->
+<div id="index">
+<font>Post</font>
+</div>
+<div class="post_main">
+    
+    <form name="form1" id="form1" method="post" action="addPost?discuss=${discuss}">
+   <input type="hidden" name="hiddenImg" id="hiddenImg"/>
+   <input type="hidden" id="basePath" name="basePath" value="<%=basePath%>"/>
+    <table  style="border-bottom:none;">
+    <tr>
+       <td id="td1">Title</td>
+       <td id="td2"><input type="text" style="width: 600px;" 
+			name="post_title" id="post_title" 
+			 <c:if test="${!discuss.equals('origin')}">value="The discussion on '${blogLog.subject}'" readonly</c:if>/>
+			 <span id="titleInfo" style="font-size:12px;color:red;display:none;">*Please fill in the title</span>
+			 </td>
+    </tr>
+    
+        <c:if test="${userInfo.isSay=='0'&&userInfo!=null&&!discuss.equals('origin')}">
+			<td id="td1">Comments</td>
+			<td id="td2"><textarea name="postContent" id="postContent" cols="100" rows="8"
+				style="width: 700px; height: 300px;">			
+			</textarea>
+			<span class="word_surplus" style="float:left;margin-top:5px;"></span>  
+			</td>
+			<input type="hidden" name="blog_id" value="${blogLog.id}"/>
+			<input type="hidden" name="blogLogId" value="${blogLog.id}"/>
+			</c:if>
+
+         <c:if test="${userInfo.isSay=='0'&&userInfo!=null&&discuss.equals('origin')}">
+		    
+			<td id="td1">Content</td>
+			<td id="td2"><textarea name="postContent" id="postContent" cols="100" rows="8"
+				style="width: 700px; height: 300px;">			
+			</textarea>
+			<span class="word_surplus" style="float:left;margin-top:5px;"></span>  
+			</td>
+			</c:if>
+			
+			 <c:if test="${userInfo.isSay!='0'&&userInfo!=null}">
+			 <td id="td1">
+			Content
+			</td>
+			 <td id="td2">
+			<div class="editor" style="width:700px;height:320px;">
+			<textarea name="postContent" id="content1" cols="100" rows="8"
+				style="width: 650px; height: 300px;">				
+			</textarea> 
+			<div class="login1" style="width:700px;">You’ve been banned from posting, the release time is${userInfo.isSay}</div>
+			<div class="mask" ></div>
+			</div>
+			</td>
+			</c:if> 
+			
+			<c:if test="${userInfo==null}">
+			 <td id="td1">
+			Content
+			</td>
+		    <td id="td2">
+			<div class="editor" style="width:700px;height:320px;">
+			<textarea name="postContent" id="content1" cols="100" rows="8"
+				style="width: 700px; height: 300px;">				
+			</textarea> 
+			<div class="login1" style="width:700px;">You can post after login <a style="color:#0ff;" href="<%=basePath%>login.html">Login</a></div>
+			<div class="mask" ></div>
+			</div>
+			</td>
+			</c:if> 
+    <tr>
+       <td id="td1">Union</td>
+       <td id="td2">
+       <c:if test="${discuss.equals('origin')}">
+       <div class="ajaxBoard">
+							<select name="board_id" id="boardId"
+								onchange="listLabelByBoardAjax()">
+								<option value="-1" selected>Please Select</option>
+								<c:forEach items="${boards}" var="item">
+									<option value="${item.id}">${item.boardName}</option>
+								</c:forEach>
+							</select>
+		</div>
+       <span id="boardInfo" style="font-size:12px;color:red;display:none;">*Please Select Union</span>
+       </c:if>
+			    <c:if test="${!discuss.equals('origin')}">${blogLog.board.boardName}
+			    <input type="hidden" name="board_id" value="${blogLog.board.id}"/>
+			    </c:if></td>
+    </tr>
+    <tr>
+       <td id="td1">Tag</td>
+       <td id="td2">
+       <c:if test="${listBlogLabel!=null}">
+       <c:forEach items="${listBlogLabel}" var="listBlogLabel">
+       ${listBlogLabel.label.labelName }&nbsp;
+       </c:forEach>
+       </c:if>
+       <c:if test="${listBlogLabel==null}">
+                   <span id="ajaxLabel">
+
+					</span>
+        <span id="labelInfo" style="font-size:12px;color:red;display:none;">*Please Select Tag</span>
+       </c:if>
+      	<a href="<%=basePath%>addLabelApply"
+								style="margin-left: 20px; padding: 1px 12px;" targer="_blank"
+								class="submitButton" type="button">Apply For Adding Tag</a>
+       </td>
+    </tr>
+    
+    
+   
+    <tr>
+       <td id="td1">Reply Permission</td>
+       <td id="td2">
+       <select name="reply_access" id="reply_access">
+			         <option value="1" style="color:blue;">Unlimited</option>
+                       <c:forEach begin="1" end="${userInfo.userLevel}" step="1" var="x">
+                           <option value="${x+1}" style="color:blue;">${x} 
+                           	star user</option>
+                       </c:forEach>
+                       <c:if test="${userInfo.userLevel<7}">
+                       <c:forEach begin="${userInfo.userLevel+1}" end="7" step="1" var="x">
+                            <option value="${x+1}" style="color:red;">${x} 
+                            star user</option>
+                       </c:forEach>
+                       </c:if>
+              
+     </select><font style="font-size:12px;color:blue;">&nbsp;&nbsp;
+      Need to pay a Panacea for a higher level permission</font>
+	   </td>
+    </tr>
+    
+    <tr>
+       <td id="td1">Start the poll</td>
+       <td id="td2">
+       <select name="TP" id="TP"  onchange="showTP()">
+           <option value="0" selected="selected">No</option>
+           <option value="1">Yes</option>
+        </select>
+         &nbsp;&nbsp;<font style="font-size:12px;color:blue;">&nbsp;&nbsp;
+         You need to pay 10 panaceas for starting the poll</font>
+	   </td>
+    </tr>
+    </table>
+    
+    
+    
+    <table class="editTP"  id="editTP" style="border-bottom:none;border-top:none;">
+    <tr >
+       <td id="td1">Voting type</td>
+       <td id="td2">
+       <select name="oneORmore" id="oneORmore">
+           <option value="one" selected="selected">Radio Group</option>
+           <option value="more">Multiple Choices</option>
+        </select>
+       </td>
+    
+    </tr>
+     <tr>
+       <td id="td1">Voting theme</td>
+       <td id="td2">
+       <input type="text" maxlength="80" style="width: 600px;" name="TPtitle" id="TPtitle" class="TPtitle"/> 
+       <span id="TPtitleInfo" style="font-size:12px; color:red;display:none;">*Please fill in the voting topic</span>
+       </td>
+    
+    </tr>
+    
+    <tr>
+       <td id="td1">Options</td>
+       <td id="td2">
+       <ul>
+           <c:forEach begin="1" end="5" step="1" var="i">
+           <li>${i}.&nbsp;&nbsp;<input type="text" maxlength="80" style="width: 600px;" name="TP1" id="TP1" class="TP"/></li>
+           </c:forEach>
+            </ul>
+            
+            <ul id="moreTP" style="display:none;">
+           <c:forEach begin="1" end="4" step="1" var="i">
+           <li>${i+5}.&nbsp;&nbsp;<input type="text" maxlength="80" style="width: 600px;" name="TP1" id="TP1" class="TP"/></li>
+           </c:forEach>
+           <li>10.<input type="text" maxlength="80" style="width: 600px;" name="TP1" id="TP1"/></li>
+            </ul>
+            <br/>
+            <span id="TPinfo" style="font-size:12px; color:red;display:none;">*Please fill in the options</span><br/>
+            <img src="<%=basePath%>images/Forums/moreTP.gif" onclick="addMoreTP()" id="addMore"/>
+            
+       </td>
+    
+    </tr>
+    
+    
+    <tr>
+       <td id="td1">Start Time</td>
+       <td id="td2">
+       <input type="text" id="timeB" onclick="return Calendar('timeB');" 
+       class="text_time" name="time1" readonly="readonly"/>
+       <span id="TPtimeInfo" style="font-size:12px;color:red;display:none;">* Please fill in the correct time</span>
+       </td>
+    
+    </tr>
+    
+    <tr>
+       <td id="td1">End time</td>
+       <td id="td2">
+       <input type="text" id="timeE" onclick="return Calendar('timeE');" 
+       class="text_time" name="time2" readonly="readonly"/>
+       <span style="font-size:12px;color:blue;">Voting End time must be later than start time</span>
+       </td>    
+    </tr>
+    </table>  
+    </form>
+    
+    
+    <table style="border-top:none;">
+     <tr>
+     <%
+						Date date = new Date();
+							SimpleDateFormat f = new SimpleDateFormat("MMyydd");
+							String nowTime = f.format(date);
+					%>
+        <td id="td1">Verification Code</td>
+		<td id="td2">
+		 <input name="chknumber" type="text"
+					id="chknumber" maxlength="4" class="chknumber_input"
+					style="width: 50px;height:28px;float:left;" />
+		<img src="<%=basePath%>web/management/makeCertPicSmall.jsp?time=<%=date%> %>" id="code"
+					onclick="reloadcode()" style="cursor: pointer;margin-left:10px;" title="Change another one" />
+		<span id="codeInfo" style="font-size:12px;color:red;display:none;">*Incorrect Verification Code</span>
+		</td>
+        </tr>
+        
+        <tr style="line-height:40px;">
+        <td id="td1">
+        &nbsp;
+        </td>
+        <td id="td2">
+        <button value="Submit"  class="submitButton" name="button" id="button" type="submit" onclick="setImg()">
+        Submit</button>
+        </td>
+        </tr>
+    
+    
+    
+    
+    </table>
+
+
+</div>
+<!--footer-->
+
+	<div class="footer">
+		<h3>2014 JIE & C DEV(HK)CO L.&nbsp;&nbsp;All Rights Reserved.</h3>
+	</div>
+	<!--footer end-->
+  </body>
+</html>

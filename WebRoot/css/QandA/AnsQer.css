@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+
+
+#reAskAnswer{
+	background-color:#EEEEEE;
+	text-align:left;
+	line-height:40px;
+}
+
+
+
+#reAskAnswer li{
+	border-bottom:#D7D7D7 1px dashed;
+	margin-left:10px;
+
+}
+
+#reAskAnswer li font{
+	color:#0099FF ;
+}
+
+#reAskAnswer li img{
+	margin-top:5px;
+}
+
+.zhuiQuestion{
+	width:500px;
+	height:50px;
+	margin-top:30px;
+	margin-left:auto;
+}

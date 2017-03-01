@@ -1,0 +1,406 @@
+.mainBox{
+	width: 1050px;
+	overflow: hidden;
+}
+.rightContent{
+	float: left;
+	width: 825px;
+	text-align:left;
+	margin-left: 25px;
+}
+.hotQandA{
+	background: #fff;
+	width: 820px;
+	min-height: 555px;
+	max-height: 555px;
+}
+.hotQandATitle {
+	height: 40px;
+	border-top: #087EC4 solid 3px;
+	align:left;
+	width: 820px;
+}
+#hotTitle{
+	margin-left: 25px;
+	font-size: 16px;
+	color: #000;
+	line-height: 40px;
+	font-family: "Microsoft YaHei UI";
+	font-weight: bolder;
+	color: #525350;
+	float: left;
+	text-shadow: 1px 1px 1px #999;
+}
+.addQuestion{
+	padding:4px 15px;
+	background:#0C86CE;
+	color: #fff;
+	float: right;
+	margin-top: 10px;
+	margin-right: 35px;
+	border-radius:5px;
+}
+
+.rightContent{
+	width:800px;
+	float:left;
+	margin-left:30px;
+	overflow: hidden;
+}
+
+/*.killerTitle*/
+.killerTitle {
+	background: url(../../img/bg_rightTitle.png) no-repeat;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+
+.killerTitle h3 {
+	font-size: 16px;
+	color: #fff;
+	font-weight: 900;
+	line-height: 30px;
+	width: 40%;
+	text-shadow: 2px 2px 2px #999;
+}
+
+/*问题达人标签*/
+.killerLabel {
+	margin-bottom: 15px;
+	width: 300px;
+	background: #FFF;
+	height: 375px;
+}
+
+.killerLabelContent {
+	width: 270px;
+	margin: 5px auto;
+}
+
+.killerLabelInfo {
+	overflow: hidden;
+	text-align: center;
+	padding:15px;
+}
+
+.killerLabelInfo tr {
+	height: 20px;
+}
+
+.killerLabelInfo span {
+	width: 15px;
+	height: 15px;
+	display: block;
+	margin-right: 10px;
+	text-align: center;
+	color: #fff;
+	float: left;
+}
+
+.killerLabelInfo a {
+	color: blue;
+}
+
+.killerLabelInfo a:hover {
+	color: red;
+}
+
+.killerLabelInfo span.rank1 {
+	background: url(../../img/bg_1.png) no-repeat;
+}
+
+.killerLabelInfo span.rank2 {
+	background: url(../../img/bg_2.png) no-repeat;
+}
+
+.killerLabelInfo span.rank3 {
+	background: url(../../img/bg_3.png) no-repeat;
+}
+
+.killerLabelInfo span.rank4 {
+	background: url(../../img/bg_4.png) no-repeat;
+}
+
+
+/*interest copyFromNewBlog_User.css  */
+.interest {
+	width: 5300px;
+	float: left;
+	background:#fff;
+}
+
+.interestTitle {
+	width: 735px;
+	height: 40px;
+	border-bottom:1px #e1e1e1 solid;
+}
+
+.interestTitle h3 {
+	
+	line-height: 35px;
+	margin-left: 40px;
+	float: left;
+}
+
+.interestContent {
+	background: #fff;
+	height: 335px;
+	overflow: hidden;
+}
+
+.interestTitle a {
+	font-size:16px;
+	color:#333;
+	text-align:center;
+	margin-top:5px;
+}
+
+.interest_blog,.interest_forum,.interest_question,.interest_label
+{
+	width:150px;
+	height:40px;
+	border-right:1px #e1e1e1 solid;
+	float:left;
+}
+.interest_blog{
+	background:#087ec4;
+}
+.interest_blog a {
+	float: left;
+	width: 150px;
+	color:#fff;
+}
+
+.interest_forum a {
+	float: left;
+	width: 150px;
+}
+
+.interest_question a {
+	float: left;
+	width: 150px;
+}
+
+.interest_label a {
+	float: left;
+	width: 100px;
+}
+
+.interest_blog_Info {
+	width: 720px;
+	display: none;
+}
+
+.interest_block {
+	display: block;
+}
+
+.interest_Info_right {
+	width: 120px;
+	float: right;
+	margin-right: 15px;
+}
+
+.interest_blog_Info_left {
+	width: 720px;
+	height:260px;
+	margin:5px;
+}
+
+.interest_more{
+	width:740px;
+	background:#ebebeb;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	font-family:"宋体";
+}
+
+.interest_more a{
+		color:#666666;
+}
+th{
+	font-weight:normal;
+}
+
+.interest_blog_Info_left_Info {
+	overflow: hidden;
+	text-align: center;
+	table-layout: fixed;
+	line-height:27px;
+	margin-left:20px;
+}
+
+.interest_blog_Info_left_Info tr {
+	height: 20px;
+}
+
+.interest_blog_Info_left_Info td {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; /*截断文字，显示省略号(...)*/
+	-o-text-overflow: ellipsis; /*Opera的专用截断文字的属性*/
+}
+
+.interest_blog_Info_left_Info a {
+	color: blue;
+}
+
+.interest_blog_Info_left_Info a:hover {
+	color: red;
+}
+.tr1{
+	background:#e7edf6;
+	font-size:14px;
+	font-family:"宋体";
+	font-weight:normal;
+	line-height:27px;
+}
+.tr2{
+	height:40px;
+}
+/* .rightContent #hotLabel{
+	width:100%;
+	background-color:#fff;
+}
+
+
+.rightContent #hotLabel #title{
+	width:100%;
+	height:34px;
+	border-bottom:#3FC8F5 3px solid;
+	
+	}
+	
+.rightContent #hotLabel #content{
+	width:80%;
+	margin:30px auto;
+	font-size:15px;
+	color:#3FC8F5;
+	height:260px;
+}
+
+.rightContent #hotLabel #title #title-bg{
+	background:url(../../images/Forums/hotLabel.png) no-repeat;
+	width:156px;
+	height:34px;
+	float:left;
+}
+.rightContent #hotLabel #title #titleName{
+	float:left;
+	margin-left:40px;
+	margin-top:5px;
+	font-size:18px;
+	color:#fff;
+}
+
+.rightContent #hotLabel #title #postForum{
+	float:right;
+	margin-right:10px;
+	margin-top:5px;
+	width:87px;
+	height:25px;
+	background:url(../../images/Forums/postButton.png) no-repeat;
+	font-size:15px;
+	color:#fff;
+	text-align:center;
+}
+
+
+.rightContent #forumsContent{
+	width:100%;
+	height:500px;
+	background:#fff;
+	margin-top:10px;
+}
+
+.rightContent #forumsContent #content{
+	width:100%;
+	height:400px;
+}
+
+.rightContent #forumsContent #title{
+	background:#EEEEEE;
+	height:35px;
+	width:100%;
+}
+
+.rightContent #forumsContent #title #newQ,#doQ,#undoQ{
+	width:33%;
+	float:left;
+	height:25px;
+	text-align:center;
+	font-size:15px;	
+	margin-top:5px;
+}
+.rightContent #forumsContent table{
+	width:80%;
+	font-size:12px;
+	margin:20px auto;
+	line-height:25px;
+	color:#9B9995;
+	
+}
+.rightContent #forumsContent #td1{
+	width:50%;
+}
+.rightContent #forumsContent #td2{
+	width:25%;
+}
+.rightContent #forumsContent #td3{
+	width:25%;
+}
+
+.rightContent #forumsContent #tr1{
+	font-size:15px;
+	color:#3FC8F5;
+}
+
+.rightContent #listNew,#listDoQ,#listUnDoQ{
+	height:400px;
+}
+ */
+ 
+/* #content a:link {color:#999;} */		/* 未被访问的链接 */
+/* #content a:visited {color:#999;} */	/* 已被访问的链接 */
+#content a:hover {color:red;}	/* 鼠标指针移动到链接上 */
+/* #content a:active {color:#3FC8F5;} */	/* 正在被点击的链接 */
+
+
+.rightContent #forumsContent #title  a {color:red;}	
+/* .rightContent #forumsContent #title  a:link {color:#999;}		 *//* 未被访问的链接 */
+/* .rightContent #forumsContent #title  a:visited {color:#999;} */	/* 已被访问的链接 */
+.rightContent #forumsContent #title  a:hover {color:red;}	/* 鼠标指针移动到链接上 */
+/* .rightContent #forumsContent #title  a:active {color:#3FC8F5;} */	/* 正在被点击的链接 */
+
+
+.submitButton a:link {color:#fff;}		/* 未被访问的链接 */
+.submitButton #forumsContent a:visited {color:#fff;}	/* 已被访问的链接 */
+.submitButton #forumsContent a:hover {color:#fff;}	/* 鼠标指针移动到链接上 */
+.submitButton #forumsContent a:active {color:#fff;}	/* 正在被点击的链接 */
+
+
+
+/* /* 滚动
+
+
+#demo {
+	text-align:center;
+	overflow:hidden;
+	height:800px;
+	width:200px;
+
+	color:#ffffff;
+	margin:0 auto;
+}
+#demo1{
+height:auto;
+	text-align:center;
+}
+#demo2{
+height:auto;
+	text-align:center;
+} */
+ */

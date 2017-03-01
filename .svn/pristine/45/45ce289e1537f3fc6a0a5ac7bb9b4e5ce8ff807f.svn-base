@@ -1,0 +1,205 @@
+@CHARSET "UTF-8";
+a{
+	color:black;
+}
+.audit_main{
+	width:1024px;
+	height:720px;
+	margin:0px auto;
+	background:#fff;
+	overflow: hidden;
+}
+.audit_title{
+	width:100%;
+	height:40px;
+	float:left;
+	margin-top:60px;
+	margin-bottom:-30px;
+	overflow: hidden;
+}
+.audit_title h3{
+	line-height:30px;
+	font-size:20px;
+	font-weight:normal;
+	margin:0px 40px;	
+    /* text-shadow:2px 2px 2px #999; */
+}
+.title_right{
+	float:right;
+	margin-right:50px;
+	height:35px;
+	margin-top:-32px;
+}
+.title_right ul{
+	margin: 0 auto;
+}
+.title_right li{
+	float:left;
+	font-family:"Microsoft YaHei UI";
+	font-size:18px;
+	line-height:35px;
+	/* text-shadow:1px 1px 1px #999; */
+}
+.title_right li a:active{
+	color:green;
+}
+.none{
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+	text-align: center;
+	
+}
+.audit_content{
+	width:960px;
+	margin:auto;
+	margin-top:108px;
+	height:560px;
+}
+.concern_list{
+	width:110px;
+	height:140px;
+	float:left;
+	margin:auto;
+	margin-left:23px;
+}
+.userName{
+	text-align: center;
+}
+
+/*好友动态*/
+.friendDt {
+	margin: 0 auto;
+	width:960px;
+	height: 570px;
+}
+
+.friendDtInfo {
+	height: 30px;
+	line-height: 40px;
+	font-size: 14px;
+	width: 960px;
+}
+
+.friendDtInfo li {
+	padding: 10px 0;
+	border-bottom: 1px #333 dashed;
+	overflow: hidden;
+}
+
+.friendDtInfo span.DTtime {
+	float: right;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+.friendDtInfo span.DTuser {
+	float: left;
+	margin-left: 5px;
+	font-size: 14px;
+}
+
+.friendDtInfo span.DTuser a {
+	color: blue;
+}
+
+.friendDtInfo span.DTuser a:hover {
+	color: red;
+}
+
+.friendDtInfo span.DTtype {
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+.friendDtInfo span.DTname {
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+	width: 650px;
+	overflow: hidden;
+}
+
+.friendDtInfo span.DTname a {
+	display: block;
+	color: blue;
+	width: 300px;
+	white-space: nowrap;
+	text-overflow: ellipsis; /*截断文字，显示省略号(...)*/
+	-o-text-overflow: ellipsis; /*Opera的专用截断文字的属性*/
+}
+
+.friendDtInfo span.DTname a:hover {
+	color: red;
+}
+
+.submitButton {
+	background: #1C86EE;
+	border: none;
+	border-radius: 0; //
+	height: 28px;
+	line-height: 16px;
+	color: #FFF;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	text-align: center;
+	cursor: pointer;
+	margin-right: 10px;
+}
+/*分页  */
+.page {
+	width:100%;
+	text-align: center;
+	height: 35px;
+    float:left;
+}
+
+.page ul {
+	margin: 0 auto;
+	overflow: hidden;
+	text-align:center;
+}
+
+.page ul li{
+	display:inline-block;
+}
+
+.page a {
+	float: left;
+	margin-right: 5px;
+	padding: 4px 8px 3px;
+	height: 18px;
+	border: 1px solid #CDCDCD;
+	white-space: nowrap;
+}
+
+.page a:hover {
+	border: 0;
+	padding: 5px 9px 4px;
+	color: #fff;
+	background: #1C86EE;
+}
+
+.nowpage {
+	color: #fff;
+	background: #1C86EE;
+	border: 0;
+	padding: 5px 9px 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

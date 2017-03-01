@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+
+.board_index
+{
+	width:31px;
+	height:27px;
+	float:left;
+	margin:4px 15px;
+
+}
+
+
+.BoardIndex{
+	width:210px;
+	background:#fff;
+	float:left;
+}
+
+.BoardIndex .boardSubject{
+	width:210px;
+	height:35px;
+	background-color:#087ec4;
+	font-size:16px;
+	line-height:35px;
+	color:#fff;
+	text-align:center;
+}
+
+.BoardIndex .boardSubject .font{
+
+	display:inline-block;
+}
+
+.BoardIndex .boardBg,.boardBg1{
+	width:210px;
+	height:35px;
+	font-size:15px;
+	color:#999;
+    
+}
+
+.BoardIndex #boardName{
+	width:180px;
+	border-bottom:1px dotted #999;
+	height:35px;
+	margin:0px auto;
+	
+}
+
+.BoardIndex .boardBg{
+	line-height:35px;
+	display:inline-block;
+
+}
+
+.BoardIndex .boardBg1 {
+	line-height:35px;
+	display:inline-block;
+
+}
+
+.BoardIndex .boardBg1{
+	background:#087ec4;
+}
+
+.boardBg1 a{
+	color:#fff;
+}
+
+.boardBg a{
+	color:#999;
+}
+
+/* .BoardIndex .boardBg .go{
+	width:26px;
+	height:26px;
+	float:right;
+	margin-top:4px;
+	background:url(../../../images/Forums/new/go.png) no-repeat;
+}
+ */
+ .board_title_font
+ {
+ float:left;
+ }
+ 
+ .go{
+ width:26px;
+ height:26px;
+ float:left;
+ margin-left:40px;
+ margin-top:4px;
+ }
+.labelIndex{
+background: #087ec4;
+filter: alpha(opacity=95);
+-moz-opacity:0.95;
+opacity:0.95;
+margin-left: 210px;
+margin-top: -36px;
+max-width: 400px;
+min-height: 35px;
+float: left;
+position: absolute;
+z-index: 1001;
+    
+	
+}
+
+.labelIndex .everyLabel{
+	color:#fff;
+	filter:alpha(opacity=100); 
+	-moz-opacity:1; 
+    opacity:1; 
+    line-height:35px;
+    margin-left:20px;
+    min-width:110px;
+    float:left;
+}
+
